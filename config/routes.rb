@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :artists, only: [:show]
-  resources :events
   resources :attendees, only: [:create, :destroy]
-  resources :clubs, only: [:show]
+  resources :clubs, only: [:show] do
+    resources :events
+  end
 end

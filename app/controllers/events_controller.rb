@@ -7,6 +7,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @lineup = @event.lineup
   end
 
   def new
