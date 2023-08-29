@@ -1,0 +1,23 @@
+<div class="container post"
+    data-controller="post-subscription"
+    data-post-subscription-post-id-value="<%= @post.id %>"
+>
+  <h1>#<%= @post.title %></h1>
+
+  <div class="comments" data-post-subscription-target="comments">
+    <% @post.comments.each do |comment| %>
+      <%= render "comments/comment", comment: comment %>
+    <% end %>
+  </div>
+</div>
+
+<%= simple_form_for [@post, @comment],
+  html: {class: "d-flex"} do |f|
+%>
+  <%= f.input :content,
+    label: false,
+    placeholder: "Comment ##{@post.title}",
+    wrapper_html: {class: "flex-grow-1"}
+  %>
+  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+<% end %>

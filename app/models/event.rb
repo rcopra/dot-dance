@@ -5,6 +5,7 @@ class Event < ApplicationRecord
   has_many :artists, through: :lineups
   has_many :attendees
   has_many :attendees_users, through: :attendees, source: :user
+  has_many :posts
   validates :title, presence: true
   validates :description, presence: true
   validates :poster_image, presence: true
