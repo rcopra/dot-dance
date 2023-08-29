@@ -105,8 +105,6 @@ event_images = [
     artist: Artist.offset(rand(Artist.count)).first,
     event: event
   )
-
-  event.accepted!
 end
 
 puts "Seed data has been successfully created."
