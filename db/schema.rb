@@ -75,9 +75,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_113304) do
     t.string "poster_image"
     t.string "address"
     t.bigint "user_id", null: false
+    t.bigint "artist_id", null: false
     t.bigint "club_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_events_on_artist_id"
     t.index ["club_id"], name: "index_events_on_club_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
@@ -108,6 +110,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_113304) do
   add_foreign_key "attendees", "events"
   add_foreign_key "attendees", "users"
   add_foreign_key "clubs", "users"
+  add_foreign_key "events", "artists"
   add_foreign_key "events", "clubs"
   add_foreign_key "events", "users"
   add_foreign_key "lineups", "artists"
