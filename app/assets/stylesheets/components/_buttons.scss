@@ -1,0 +1,79 @@
+
+.button-primary {
+  color: #fff;
+  display: inline-block;
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  width: auto;
+  min-width: 200px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Anonymous pro', monospace;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  background: rgba( 255, 255, 255, 0.1 );
+}
+
+// .button-primary--dark:before {
+//   background-color: transparent;
+// }
+
+
+.button-primary:before {
+  background-color: #fff;
+  bottom: 3px;
+  margin: 300px;
+  content: "";
+  left: 3px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  transition: background-color .3s cubic-bezier(.25,.46,.45,.94);
+  z-index: -1;
+}
+
+.button-primary__corners {
+  background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
+  linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
+  linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
+  linear-gradient(180deg,#fff 1px,transparent 0) 100% 0,
+  linear-gradient(270deg,#fff 1px,transparent 0) 100% 100%,
+  linear-gradient(0deg,#fff 1px,transparent 0) 100% 100%,
+  linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
+  linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 3px 3px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 1s;
+
+
+  &:hover {
+    background-size: 200px 200px;
+  }
+}
+
+
+.button-primary:after, .button-primary__corners {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+// ------------------------------------------------
