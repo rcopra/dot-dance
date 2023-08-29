@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_28_104106) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_28_151622) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -45,13 +45,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_104106) do
     t.string "poster_image"
     t.string "address"
     t.bigint "user_id", null: false
-    t.bigint "artist_id", null: false
     t.bigint "club_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["artist_id"], name: "index_events_on_artist_id"
     t.index ["club_id"], name: "index_events_on_club_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "lineups", force: :cascade do |t|
+    t.bigint "artist_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_lineups_on_artist_id"
+    t.index ["event_id"], name: "index_lineups_on_event_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,7 +75,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_104106) do
 
   add_foreign_key "attendees", "events"
   add_foreign_key "attendees", "users"
-  add_foreign_key "events", "artists"
   add_foreign_key "events", "clubs"
   add_foreign_key "events", "users"
+  add_foreign_key "lineups", "artists"
+  add_foreign_key "lineups", "events"
 end
