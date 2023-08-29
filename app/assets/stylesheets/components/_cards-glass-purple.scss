@@ -1,0 +1,129 @@
+.body-test {
+  background: linear-gradient(270deg, rgba(31,0,71,1) 0%, rgba(23,0,64,1) 32%, rgba(0,0,0,1) 100%);
+  padding: 5vh;
+  background-repeat: none;
+  min-height: 100vh;
+
+  p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+.glass-card {
+  background: rgba( 255, 255, 255, 0.1 );
+  color: white;
+  font-family: 'Anonymous pro', monospace;
+  text-transform: uppercase;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( .5px );
+  // border: 1px solid rgba( 0, 0, 0, 0.18 );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  min-height: 350px;
+  height: auto;
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(asset_path('berlin_poster.jpeg'));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+    h1 {
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      filter: brightness(1.75);
+    }
+  }
+
+.glass-card-corners {
+  background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
+  linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
+  linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
+  linear-gradient(180deg,#fff 1px,transparent 0) 100% 0,
+  linear-gradient(270deg,#fff 1px,transparent 0) 100% 100%,
+  linear-gradient(0deg,#fff 1px,transparent 0) 100% 100%,
+  linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
+  linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 1vh 1vh;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 1s;
+  width: 100%;
+  min-height: 350px;
+  height: auto;
+
+  &:focus {
+    background-size: 100vh;
+  }
+}
+
+.card-container {
+  flex-direction: column;
+}
+
+.card-header {
+  margin: 1.5rem 3.5rem 0rem 0rem;
+	display: flex;
+  padding: 15px;
+	align-items: left;
+}
+
+.card-content {
+  color: #fff;
+  align-items: left;
+  text-align: left;
+  border-bottom: 1px solid #D5F34C;
+
+  p {
+    margin-left: 15px;
+    font-family: 'Anonymous pro', monospace;  
+  }
+}
+
+.icon-button {
+	border: 0;
+  margin-left: 15px;
+	background-color: #fff;
+	border-radius: 50%;
+	width: auto;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	font-size: 1.25rem;
+	transition: .25s ease;
+	z-index: 1;
+	cursor: pointer;
+	color: #D5F34C;
+  background-color: transparent;
+
+	svg {
+		width: 1em;
+		height: 1em;
+	}
+	&:hover, &:focus {
+		color:  #D5F34C;
+	}
+}
+
+.card-footer {
+	padding-top: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-top: auto;
+
+
+  p {
+    margin: 0px 15px;
+    color: #ffffff;
+  }
+}
