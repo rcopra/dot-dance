@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :user
-  belongs_to :club
+  belongs_to :club, optional: true
   has_many :lineups
   has_many :artists, through: :lineups
   has_many :attendees
@@ -10,4 +10,6 @@ class Event < ApplicationRecord
   validates :poster_image, presence: true
   validates :address, presence: true
   has_one_attached :photo
+  validates :club_id, presence: true, unless: ->(event) { event.address.present? }
+  enum status: [ :pending, :rejected, :accepted ]
 end
