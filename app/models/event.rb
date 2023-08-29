@@ -11,4 +11,5 @@ class Event < ApplicationRecord
   validates :address, presence: true
   has_one_attached :photo
   validates :club_id, presence: true, unless: ->(event) { event.address.present? }
+  enum status: [ :pending, :rejected, :accepted ]
 end
