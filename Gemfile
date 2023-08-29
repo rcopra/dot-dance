@@ -77,3 +77,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+# Gems for seed files
+gem 'faker'
+gem 'cloudinary'
