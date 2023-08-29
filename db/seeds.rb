@@ -97,7 +97,7 @@ event_images = [
     address: "Event Address #{i + 1}",
     user: party_promoter,
     club: club,
-    poster_image: event_images[i] # Use the image URL from the event_images array
+    poster_image: event_images[i]
   )
 
   # Add lineups to events
@@ -105,8 +105,6 @@ event_images = [
     artist: Artist.offset(rand(Artist.count)).first,
     event: event
   )
-
-  event.accepted!
 end
 
 puts "Seed data has been successfully created."

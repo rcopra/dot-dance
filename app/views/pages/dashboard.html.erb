@@ -1,0 +1,21 @@
+<div class="header-dashboard">
+   <h1>Welcome to .games, <%= current_user.email %> </h1>
+</div>
+
+
+  <div class="homepage-grid">
+    <div class="dashboard-card">
+      <h6>Your RSVP's:</h6>
+      <div id="user_events">
+        <ul>
+          <% @user.events.each do |event| %>
+            <li>
+               <p> 🍄 <%= event.title %>, <%= event.date %>, <%= event.address %>, <%= event.poster_image %></p>
+            </li>
+          <% end %>
+        </ul>
+            <%= link_to "Find another adventure", events_path %>
+      </div>
+    </div>
+  </div>
+</div>
