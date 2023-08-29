@@ -10,4 +10,5 @@ class Event < ApplicationRecord
   validates :poster_image, presence: true
   validates :address, presence: true
   has_one_attached :photo
+  enum status: [ :pending, :rejected, :accepted ]
 end
