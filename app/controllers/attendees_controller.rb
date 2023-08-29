@@ -13,6 +13,9 @@ class AttendeesController < ApplicationController
     end
   end
 
+  def destroy
+    @attendee.destroy
+  end
   private
 
   def attendee_params
