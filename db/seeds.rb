@@ -39,7 +39,6 @@ djs = [
 djs.each do |name|
   Artist.create(name: name, genre: "Techno")
 end
-
 # Create clubs
 berlin_clubs = [
   {
@@ -117,7 +116,7 @@ end
 events = [
   {
     title: "Schrott-Etüde: An Etude for Extinction",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "A musical composition for multiple percussion, cars and bodies on fire.
 
     According to Frédéric Chopin, “an étude is a musical composition of considerable difficulty, designed to provide practice material for an instrument and its player.” Yet, they are designed to “always please the audience in concert”.The scene for Schrott-Etüde (Scrap Etude): An Etude for Extinction is the parking lot at Olympiastadion.
@@ -130,7 +129,7 @@ events = [
   },
   {
     title: "House of Lunacy - Midsummer Dreaming",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "'Are you sure that we are awake? It seems to me that yet we sleep, we dream'...
 
     The summer of LOVE is here! And we are celebrating those warm summer months and closing with a big juicy bang!
@@ -145,7 +144,7 @@ events = [
   },
   {
     title: "BITE Nite 5 Years",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Hardly any label brings 80s influences like EBM, industrial and dark wave into a contemporary techno aesthetic more coherently than the BITE label, co-run by Phase Fatale. For the label's fifth anniversary at Berghain and Panorama Bar, he'll be playing with label acts like Reka, Silent Servant (in a long overdue back2back with Phase Fatale), Unhuman and Vulkanski, resident of Tbilisi's KHIDI club, as well as friends and like-minded acts. Berlin-New York duo Enxin/Onyx, consisting of Tommi Tokyo and Nicky Mao, play dystopian ritual music infused with Mao's ghostly vocals, evoking the broken spirit of Throbbing Gristle. Meanwhile, Sharlese is considered one of the most exciting synth-wave and goth DJs on the American West Coast, serving as resident DJ of Seattle's underground techno collective secondnature and as a member of Black Techno Matters.",
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vOGRlMGUyMWZhNjA4ZDY0NzQxYzA4MTk3MDM4MGM0MzM2ZTgyNjMxNi5qcGc=",
     user_id: 2,
@@ -154,7 +153,7 @@ events = [
   },
   {
     title: "SÄULE",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "As a member of Madrid's Loopstage collective, Colell explores various, mostly trance-influenced strains of techno that he brings together in his energetic DJ sets. Recently, he launched his own label, Aurora Records. Katie is a newcomer in the contemporary club scene who's been playing a mix of forest trance and urban psy at select events over the past few years. Joining them tonight at Säule is Viennese newskool trance DJ Transki.",
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNWVjODVmYThjODlkYWQ0MTAwOWY3YjM1OTE2NzQ4ZGE4OWNlYWQ2Ny5wbmc=",
     user_id: 2,
@@ -163,7 +162,7 @@ events = [
   },
   {
     title: "Radiant Records",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Radiant Records is part of the expanded universe of the nomadic party series by Byron Yeates and his collective, Radiant Love. Across more than ten releases, a hedonistic prog-trance-ambient-house world unfolds in different tempos and styles, firmly anchored to the queer dancefloors of our time. French duo Baraka, consisting of singer and poet Hawa Sarita and DJ/producer Cristofeu, represents a hybrid dance-pop that brings together Sarita's catchy vocals with her partner's powerful percussion and acid sounds. In addition to their live gig, tonight's label party at Panorama Bar will feature DJ sets from Byron Yeates, Australian DJ Kia and Finnish electro producer Sansibar.",
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNDZkNjQyYTE5ZmU0MzkyYzJiMTM3NTQ4MjQ5ODc1NThjYjZkNjhjNy5wbmc=",
     user_id: 2,
@@ -172,7 +171,7 @@ events = [
   },
   {
     title: "NEVER SLEEP w/ Gabber Eleganza, Snake Gang live, Soraya & Lizzitsky",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "ONLINE PRESALE:
     Please note that a presale ticket does not guarantee entry. The club reserves the right to deny entry. Tickets will be automatically refunded in that case. Due to increased security checks at the entrance, there may be an increased waiting time even with a ticket. We ask you to please take this into account and respect it. Thank you.",
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vZTcwOGYyYmNlZWQ5MzMxZjM5OTVjZjcwYTgzZWQ0MzQxMzJkYmZmNS5qcGc=",
@@ -182,7 +181,7 @@ events = [
   },
   {
     title: "Grounded Theory [58]",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Grounded Theory have been showcasing heavyweight club music for 14 years. This celebratory birthday bash welcomes resident and cofounder Henning Baer, UK techno master DAX J, NYC's high energy rave specialist KYRUH and Herrensauna resident SPFDJ, for a night of no-holds-barred techno. ",
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vMWE1ZDU2MGJkZjhhYmQ4NGU1MjA3NTU0MGZmZTEwZTgwOGU2YzE0OC5qcGc=",
     user_id: 2,
@@ -191,7 +190,7 @@ events = [
   },
   {
     title: "ANOMALIE x OXYGEN",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Celebrating the new generation of techno DJs like Fatima Hajji, Michael Klein, Koloah, DYEN and Frazi.er, keep your calendar free for this extended 36-hour rave at Anomalie Art Club.",
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vODA4NTZmODE3OWEzYmViMTI0OTBjYWQ1ZTVmMTcwMDY4MTMwMmQ3ZS5qcGc=",
     user_id: 2,
@@ -200,7 +199,7 @@ events = [
   },
   {
     title: "RFLXN x Gravity Network with Bailey Ibbs, Detroit In Effect, JKS, Kaiser & Neri J",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Gravity, the European cooperation project aiming to develop electronic music culture by creating a foundation for an expanding network of electronic music venues, in which that we are a part of, returns to RSO. The night sees Molekül co-founder, JKS, return to the ROBUS floor and DJ Bus Replacement on the SUMME floor. The cultural night also features Neri J, Detroit in Effect, and Kaiser.",
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vYTMyODkxYjA4YzA4NjZlNzBhNDhjMDYwZGQzNDBiYWE3Zjg1OTk4ZS5qcGc=",
     user_id: 2,
@@ -209,7 +208,7 @@ events = [
   },
   {
     title: "Intercell - Summer Series - Else Berlin",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "We're glad to announce our second showcase at Else Klub, taking over this amazing venue for another heated summer session on September 2nd. Coming through with a sweet blend of groove, tech-trance and everything in between, and yet again starting off outdoors and extending the dance indoors for the darker dancers.
 
     Join in on another outburst.",
@@ -220,7 +219,7 @@ events = [
   },
   {
     title: "MATTER",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "INFO
 
     Where is Else?
@@ -238,7 +237,7 @@ events = [
   },
   {
     title: "ungesund",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Loose vibes, lowkey bangers and a warm summer night. What else does it even need? Expect a load of hypnotic techno, pumping house and eclectic breaks on two floors curated in the best manner with care and love.
 
     Any form of racism, discrimination, sexism, homophobia or transphobia won’t be tolerated. Please respect the no photo policy, keep your phone in your pocket and enjoy the moment.
@@ -250,7 +249,7 @@ events = [
   },
   {
     title: "10 JAHRE DIFFUSE REALITY",
-    date: Date.today + i.days,
+    date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "10 years of love.
     10 years of passion.
     10 years of Diffuse Reality in Berlin.
@@ -268,21 +267,23 @@ events = [
 ]
 
 events.each do |event|
-  Event.create(
+  new_event = Event.create!(
     title: event[:title],
     description: event[:description],
     address: event[:address],
     user: party_promoter,
     date: event[:date],
-    club_id: event[:club_id]
+    club_id: event[:club_id],
+    status: 2,
+    poster_image: event[:poster_image]
   )
-  event.accepted!
 
   rand(1..5).times do
-    Lineup.create(
+    Lineup.create!(
       artist: Artist.offset(rand(Artist.count)).first,
-      event: event
+      event_id: new_event.id
     )
   end
 end
+
 puts "Seed data has been successfully created."
