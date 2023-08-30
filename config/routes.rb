@@ -8,3 +8,4 @@ Rails.application.routes.draw do
   resources :attendees, only: [:create, :destroy]
   resources :clubs, only: [:show]
 end
+

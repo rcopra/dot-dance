@@ -75,7 +75,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_123131) do
     t.string "poster_image"
     t.string "address"
     t.bigint "user_id", null: false
-    t.bigint "artist_id", null: false
     t.bigint "club_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -110,7 +109,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_123131) do
   add_foreign_key "attendees", "events"
   add_foreign_key "attendees", "users"
   add_foreign_key "clubs", "users"
-  add_foreign_key "events", "artists"
   add_foreign_key "events", "clubs"
   add_foreign_key "events", "users"
   add_foreign_key "lineups", "artists"

@@ -1,13 +1,8 @@
 .body-test {
   background: linear-gradient(270deg, rgba(31,0,71,1) 0%, rgba(23,0,64,1) 32%, rgba(0,0,0,1) 100%);
-  padding: 5vh;
   background-repeat: none;
+  padding: 5vh;
   min-height: 100vh;
   justify-content: center;
-
-  p {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-  }
+  flex-direction: column;
 }

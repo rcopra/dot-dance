@@ -1,5 +1,6 @@
 .index-grid {
   display : grid;
   grid-template-columns: 1fr;
-  grid-gap: 50px;
+  gap: 25px;
+  place-items: center;
 }
