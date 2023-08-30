@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :events
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :events do
-    resources :posts, only: [:show, :create]
+    resources :posts, only: [:index, :show, :create]
   end
   resources :posts, only: [] do
     resources :comments, only: [:create]
