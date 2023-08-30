@@ -3,18 +3,11 @@
   <h1>.dance</h1>
 </div>
 
-<div class="container">
+
   <div class="index-grid">
     <% if @events.any? %>
       <% @events.each do |event| %>
-          <img src="<%= event.poster_image %>">
-          <h6>Title:</h6>
-          <p><%= event.title %></p>
-          <h6>Date:</h6>
-          <p><%= event.date %></p>
-          <h6>Description:</h6>
-          <p><%= event.description %></p>
-        <p><%= link_to "More info", event_path(event) %></p>
+        <%= render "events_card", event: event %>
       <% end %>
     <% else %>
       <em>Sorry, no events found.</em>
