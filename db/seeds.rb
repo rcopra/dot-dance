@@ -7,23 +7,23 @@ Event.destroy_all
 Lineup.destroy_all
 
 # Create users
-party_goer = User.create(email: 'person@example.com', password: 'password')
+User.create(email: 'person@example.com', password: 'password')
 party_promoter = User.create(email: 'promoter@example.com', password: 'password')
 club_owner = User.create(email: 'club@example.com', password: 'password')
 
 # Create artists
 
 funny_techno_names = [
-  "Squidtastic",
-  "Beep Boop",
-  "Funky Circuit",
-  "Synth Sausage",
-  "Bleep Blorp",
-  "Dr. Disco Byte",
-  "Robo Grooves",
-  "Circuit Breaker",
-  "Techno Tofu",
-  "Groove Machine"
+  "DJ Squidtastic",
+  "DJ Beep Boop",
+  "DJ Funky Circuit",
+  "DJ Synth Sausage",
+  "DJ Bleep Blorp",
+  "DJ Dr. Disco Byte",
+  "DJ Robo Grooves",
+  "DJ Circuit Breaker",
+  "DJ Techno Tofu",
+  "DJ Groove Machine"
 ]
 
 funny_techno_names.each do |name|
@@ -90,21 +90,26 @@ event_images = [
 15.times do |i|
   club = Club.offset(rand(Club.count)).first
 
+  event_title = Faker::Space.planet
+  event_description = Faker::Hipster.sentences(number: 2).join(' ')
+
   event = Event.create(
-    title: "Event #{i + 1}",
+    title: event_title,
     date: Date.today + i.days,
-    description: "Event Description #{i + 1}",
-    address: "Event Address #{i + 1}",
+    description: event_description,
+    address: club.address,
     user: party_promoter,
     club: club,
     poster_image: event_images[i]
   )
 
   # Add lineups to events
-  Lineup.create(
-    artist: Artist.offset(rand(Artist.count)).first,
-    event: event
-  )
+  rand(2..5).times do
+    Lineup.create(
+      artist: Artist.offset(rand(Artist.count)).first,
+      event: event
+    )
+  end
 end
 
 puts "Seed data has been successfully created."
