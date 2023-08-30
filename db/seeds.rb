@@ -7,6 +7,7 @@ Event.destroy_all
 Lineup.destroy_all
 
 # Create users
+
 party_goer = User.create(email: 'person@example.com', password: 'password', username: 'person')
 party_promoter = User.create(email: 'promoter@example.com', password: 'password', username: 'promoter')
 club_owner = User.create(email: 'club@example.com', password: 'password', username: 'owner')
