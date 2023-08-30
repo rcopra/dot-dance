@@ -12,7 +12,7 @@
 </div>
 
 <%= simple_form_for [@post, @comment],
-  html: {class: "d-flex"} do |f|
+  html: { data: { action: "turbo:submit-end->post-subscription#resetForm" }, class: "d-flex" } do |f|
 %>
   <%= f.input :content,
     label: false,

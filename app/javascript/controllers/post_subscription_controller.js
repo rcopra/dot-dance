@@ -9,8 +9,22 @@ import { createConsumer } from "@rails/actioncable"
     connect() {
       this.channel = createConsumer().subscriptions.create(
         { channel: "PostChannel", id: this.postIdValue },
-        { received: data => console.log(data) }
+        { received: data => this.commentsTarget.insertAdjacentHTML("beforeend", data) }
       )
       console.log(`Subscribed to the post with the id ${this.postIdValue}.`)
+    }
+
+    resetForm(event) {
+      event.target.reset()
+    }
+
+    disconnect() {
+      console.log("Unsubscribed from the post")
+      this.channel.unsubscribe()
+    }
+
+    #insertCommentAndScrollDown(data) {
+      this.commentsTarget.insertAdjacentHTML("beforeend", data)
+      this.commentsTarget.scrollTo(0, this.commentsTarget.scrollHeight)
     }
 }
