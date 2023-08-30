@@ -5,4 +5,10 @@
   min-height: 100vh;
   justify-content: center;
   flex-direction: column;
+  color: white;
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
 }

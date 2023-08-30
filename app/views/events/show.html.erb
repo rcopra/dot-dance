@@ -26,6 +26,16 @@
           <% @lineup.each do |i|%>
           <p><%= i.artist.name %></p>
           <% end %>
+         <% if current_user %>
+  <% if current_user.attending?(@event) %>
+    <%= button_to "No longer attending", event_attendee_path(@event, current_user.attendee_for_event(@event)), method: :delete %>
+  <% else %>
+    <%= button_to "RSVP", event_attendees_path(@event), method: :post %>
+  <% end %>
+<% else %>
+  <%= link_to "Log in or Sign up to RSVP", new_user_session_path %>
+<% end %>
+</div>
         </div>
       </div>
   </div>
