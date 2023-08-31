@@ -22,23 +22,21 @@ a {
   text-align: center;
   justify-content: center;
   display: inline-block;
-  background: rgba( 255, 255, 255, 0.1 );
+
+  &:hover, &:focus {
+    color: #D5F34C;
+  }
 }
-
-// .button-primary--dark:before {
-//   background-color: transparent;
-// }
-
 
 .button-primary:before {
   background-color: #fff;
-  bottom: 3px;
   margin: 300px;
   content: "";
-  left: 3px;
   position: absolute;
+  left: 3px;
   right: 3px;
   top: 3px;
+  bottom: 3px;
   transition: background-color .3s cubic-bezier(.25,.46,.45,.94);
   z-index: -1;
 }
@@ -75,5 +73,3 @@ a {
   right: 0;
   top: 0;
 }
-
-// ------------------------------------------------

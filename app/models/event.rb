@@ -13,4 +13,6 @@ class Event < ApplicationRecord
   has_one_attached :photo
   validates :club_id, presence: true, unless: ->(event) { event.address.present? }
   enum status: [ :pending, :rejected, :accepted ]
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
