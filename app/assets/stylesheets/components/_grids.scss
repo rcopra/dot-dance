@@ -1,7 +1,7 @@
-.index-grid {
-  display : grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
-  place-items: center;
-  // padding-top: 20vh;
+
+.show-grid {
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 5px;
+  width: 100%;  
 }

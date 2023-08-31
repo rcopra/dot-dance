@@ -1,49 +1,40 @@
+<div>
     <%if current_user == @event.user  %>
       <%= link_to "Edit the event", edit_event_path(@event) %>
       <%= link_to 'Delete this event', @event, data: {turbo_method: :delete}%>
 <% end %>
 
-
-<img class="img-show" src="<%= @event.poster_image %>">
-<div class="card-primary mt-5">
-  <div class="card-primary__corners"></div>
-        <h6>Lineup:</h6>
-        <% @lineup.each do |i|%>
-          <p><%= i.artist.name %></p>
-        <% end %>
-      </div>
-    <div class="card-primary mt-5">
+<div class="show-grid">
+  <img class="img-show" src="<%= @event.poster_image %>">
+  <div class="show-info">
+    <div class="card-primary">
+      <div class="card-primary__corners"></div>
+      <h6>Lineup:</h6>
+      <% @lineup.each do |i|%>
+        <p><%= i.artist.name %></p>
+      <% end %>
+    </div>
+    <div class="card-primary">
       <div class="card-primary__corners"></div>
       <h6>Title:</h6>
-       <p><%= @event.title %></p>
+      <p><%= @event.title %></p>
     </div>
-  <div class="card-primary mt-5">
-    <div class="card-primary__corners"></div>
+    <div class="card-primary">
+      <div class="card-primary__corners"></div>
       <h6>Date:</h6>
       <p><%= @event.date %></p>
     </div>
-  <div class="card-primary mt-5">
-    <div class="card-primary__corners"></div>
-      <h6>Description:</h6>
-      <p><%= @event.description %></p>
-    </div>
-  <div class="card-primary mt-5">
-    <div class="card-primary__corners"></div>
-      <%= link_to "Back to events", events_path %>
-    </div>
-    <div style="width: 300px; height: 300px"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
   </div>
+</div>
 
-  <div class="attending-button" data-controller="change-button" data-action="click->change-button#fire">
-    <% if current_user %>
-      <% if current_user.attending?(@event) %>
-        <%= button_to "No longer attending", event_attendee_path(@event, current_user.attendee_for_event(@event)), method: :delete %>
-      <% else %>
-        <%= button_to "RSVP", event_attendees_path(@event), method: :post, data: {
+  <div class="button-primary">
+    <div class=" button-primary__corners "></div>
+      <div class="attending-button" data-controller="change-button" data-action="click->change-button#fire">
+          <% if current_user %>
+          <% if current_user.attending?(@event) %>
+            <%= button_to "No longer attending", event_attendee_path(@event, current_user.attendee_for_event(@event)), method: :delete %>
+          <% else %>
+            <%= button_to "RSVP", event_attendees_path(@event), method: :post, data: {
               controller: "alert",
               alert_title_value: "See you at #{@event.title}!",
               alert_html_value: "#{@event.date}",
@@ -54,8 +45,35 @@
               action: "click->alert#initSweetalert",
               turbo: false
             } %>
-      <% end %>
-    <% else %>
-      <%= link_to "Log in or Sign up to RSVP", new_user_session_path %>
-    <% end %>
+          <% end %>
+        <% else %>
+          <%= link_to "Log in or Sign up to attend", new_user_session_path %>
+        <% end %>
+      </div>
   </div>
+
+
+
+
+
+  <div class="card-primary">
+    <div class="card-primary__corners"></div>
+      <h6>Description:</h6>
+      <p><%= @event.description %></p>
+    </div>
+  </div>
+
+
+  <div style="width: 96vw; height: 150px; margin-top: 10px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+
+  <div class="button-primary mb-10  ">
+    <div class=" button-primary__corners "></div>
+    <%= link_to "Back to events", events_path %>
+  </div>
+
+</div>
