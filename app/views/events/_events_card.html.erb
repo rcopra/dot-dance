@@ -9,18 +9,13 @@
         </div>
       </div>
       <div class="card-content">
-        <p><%= event.description %></p>
-        <p><%= event.club %></p>
+        <p><%= event.club.name %></p>
       </div>
-      <div class="card-footer">
-        <div class="footer-item calendar">
-          <p><i class="fa fa-calendar"></i> <%= event.date %></p>
+        <div class="card-footer">
+        <div class="card-footer-item"><i class="fa fa-calendar fa-fw icon-button"></i> <%= event.date %></p></div>
+        <div class="card-footer-item"><i class="fa-regular fa-user fa-fw icon-button"></i> 123</p></div>
+        <div class="card-footer-item"><%= link_to "INFO", event_path(event) %></div>
         </div>
-        <div class="footer-item users">
-          <p class="icon-button"> <i class="fa-regular fa-user"></i></p>
-          <p><span class="number">123</span></p>
-        </div>
-      </div>
     </div>
   </div>
 </div>
