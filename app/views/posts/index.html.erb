@@ -1,50 +1,41 @@
 <div class="header" >
   <h1>Threads</h1>
+  <h1>#<%= @event.title%></h1>
 </div>
 
-<div class="container chatroom"
-  data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
->
-  <h1>#<%= @post.event.title%></h1>
-
-  <div class="posts" data-chatroom-subscription-target="posts">
-
-
-    <div class="container">
-      <div class="index-grid">
-        <% if @posts.any? %>
-          <% @posts.each do |post| %>
-            <div class="my-5">
-              <%= render "posts/post", post: post %>
-            </div>
-          <% end %>
-        <% else %>
-          <em>No threads yet..</em>
-        <% end %>
-      </div>
+<div class="body-test">
+  <%= simple_form_for(@post, url: event_posts_path) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="form-inputs">
+      <%= f.input :title %>
+      <%= f.input :topic, collection: %w[line vibe general social] %>
+      <%= f.simple_fields_for :comments do |m| %>
+        <%= m.input :content %>
+      <% end %>
     </div>
-  </div>
+    <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-primary mt-2"%>
+    </div>
+  <% end %>
 </div>
 
+<div class="container posts"
+  data-controller="posts-channel-subscription"
+  data-posts-channel-subscription-event-id-value="<%=@event.id%>"
+>
 
-  <div data-controller="toggle">
-    <button class="btn btn-outline-primary" data-action="click->toggle">Post a thread</button>
-    <div class="body-test">
-      <%= simple_form_for [@chatroom, @post, url: event_posts_path],
-      html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
-        <%= f.error_notification %>
-        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-        <div class="form-inputs">
-          <%= f.input :title %>
-          <%= f.input :topic, collection: %w[line vibe general social] %>
-          <%= f.simple_fields_for :comments do |m| %>
-            <%= m.input :content %>
-          <% end %>
-        </div>
-        <div class="form-actions">
-          <%= f.button :submit, class: "btn btn-primary mt-2"%>
-        </div>
+  <div class="container">
+    <div class="index-grid" data-posts-channel-subscription-target="posts">
+      <% if @posts.any? %>
+        <% @posts.each do |post| %>
+          <div class="my-5">
+            <%= render "posts/post", post: post %>
+          </div>
+        <% end %>
+      <% else %>
+        <em>No threads yet..</em>
       <% end %>
     </div>
   </div>
+</div>

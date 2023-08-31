@@ -1,8 +1,8 @@
 class PostsChannel < ApplicationCable::Channel
   def subscribed
-    # stream_from "some_channel"
-    chatroom = chatroom.find(params[:id])
-    stream_for chatroom
+    stream_from "some_channel"
+    # posts_channel = Event.find(params[:event_id])
+    # stream_for posts_channel
   end
 
   def unsubscribed
