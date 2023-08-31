@@ -20,7 +20,11 @@ class PostsController < ApplicationController
       @comment.post = @post
       @comment.user = current_user
       if @comment.save
-        redirect_to event_posts_path, notice: "Thread was successfully created."
+        ChatroomChannel.broadcast_to(
+          @chatroom,
+          render_to_string(partial: "post", locals: { post: @post })
+        )
+        head :ok
       else
         render :new, status: :unprocessable_entity
       end

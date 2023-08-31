@@ -82,3 +82,4 @@ end
 # Gems for seed files
 gem 'faker'
 gem 'cloudinary'
+gem "geocoder"
