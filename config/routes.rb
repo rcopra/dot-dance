@@ -13,4 +13,3 @@ Rails.application.routes.draw do
   resources :artists, only: [:show]
   resources :clubs, only: [:show]
 end
-
