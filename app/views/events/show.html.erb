@@ -1,4 +1,3 @@
-
     <%if current_user == @event.user  %>
       <%= link_to "Edit the event", edit_event_path(@event) %>
       <%= link_to 'Delete this event', @event, data: {turbo_method: :delete}%>
@@ -38,12 +37,23 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
+
   <div class="attending-button" data-controller="change-button" data-action="click->change-button#fire">
     <% if current_user %>
       <% if current_user.attending?(@event) %>
         <%= button_to "No longer attending", event_attendee_path(@event, current_user.attendee_for_event(@event)), method: :delete %>
       <% else %>
-        <%= button_to "RSVP", event_attendees_path(@event), method: :post %>
+        <%= button_to "RSVP", event_attendees_path(@event), method: :post, data: {
+              controller: "alert",
+              alert_title_value: "See you at #{@event.title}!",
+              alert_html_value: "#{@event.date}",
+              alert_confirm_button_text_value: "<a href='#{event_posts_path(@event)}'>CHAT</a>",
+              alert_show_cancel_button_value: true,
+              alert_cancel_button_text_value: "<a href='#{events_path}'>see other options</a>",
+              # footer: '<a href="/">See other options</a>',
+              action: "click->alert#initSweetalert",
+              turbo: false
+            } %>
       <% end %>
     <% else %>
       <%= link_to "Log in or Sign up to RSVP", new_user_session_path %>
