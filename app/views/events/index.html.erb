@@ -1,16 +1,11 @@
-
-<div class="header" >
-  <h1>.dance</h1>
+<div class="index-grid mt-5">
+  <% if @events.any? %>
+    <% @events.each do |event| %>
+      <%= render "events_card", event: event %>
+    <% end %>
+  <% else %>
+    <em>Sorry, no events found.</em>
+  <% end %>
 </div>
 
 
-  <div class="index-grid">
-    <% if @events.any? %>
-      <% @events.each do |event| %>
-        <%= render "events_card", event: event %>
-      <% end %>
-    <% else %>
-      <em>Sorry, no events found.</em>
-    <% end %>
-  </div>
-~
