@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @event = Event.find(params[:event_id])
+    @posts = @event.posts
     @post = Post.new
     @post.comments.build
   end
@@ -20,11 +21,12 @@ class PostsController < ApplicationController
       @comment.post = @post
       @comment.user = current_user
       if @comment.save
-        ChatroomChannel.broadcast_to(
-          @chatroom,
-          render_to_string(partial: "post", locals: { post: @post })
-        )
-        head :ok
+        # PostsChannel.broadcast_to(
+        #   "some_channel",
+        #   render_to_string(partial: "post", locals: { post: @post })
+        # )
+        # head :ok
+        redirect_to event_posts_path, notice: "Thread was successfully created."
       else
         render :new, status: :unprocessable_entity
       end
