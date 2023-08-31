@@ -1,0 +1,43 @@
+.swal2-styled.swal2-confirm{
+  background-color: black !important;
+  font-size: 15px !important;
+  border-radius: 0 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.swal2-styled.swal2-cancel {
+  background-color: #d5f34c !important;
+  font-size: 15px !important;
+  border-radius: 0 !important;
+  font-family: 'Poppins', sans-serif !important;
+  a {
+    color: black !important;
+  }
+}
+.swal2-popup {
+  width: 70vw !important;
+  font-family: 'Poppins', sans-serif !important;
+  color: black !important;
+  border-radius: 0 !important;
+  padding: 0 0 0 !important;
+}
+
+.swal2-html-container {
+ text-align: left !important;
+}
+
+.swal2-title {
+  color: black !important;
+  text-align: left !important;
+  text-transform: uppercase !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 20px !important;
+}
+
+a {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.swal2-actions {
+  margin: 0 !important;
+}
