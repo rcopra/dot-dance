@@ -3,11 +3,5 @@
   grid-template-columns: 1fr;
   gap: 25px;
   place-items: center;
-}
-
-.footer-card-grid {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  place-items: center;
-  max-height: 7vh;
+  // padding-top: 20vh;
 }

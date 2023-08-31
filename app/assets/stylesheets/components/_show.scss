@@ -1,19 +1,24 @@
 
-.button-primary {
+.card-primary {
   color: #fff;
   display: inline-block;
-  height: 40px;
   outline: none;
   padding: 10px;
   position: relative;
-  width: auto;
-  min-width: 60%;
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border: 0.1px solid (255, 255, 255, 0.2);
+  min-width: 90%;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  width: 80%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+
+  h6 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
 }
 
-// *, :after, :before {
-//   box-sizing: inherit;
-// }
 a {
   color: white;
   text-decoration: none;
@@ -26,22 +31,22 @@ a {
   &:hover, &:focus {
     color: #D5F34C;
   }
+
 }
 
-.button-primary:before {
-  background-color: #fff;
-  margin: 300px;
-  content: "";
-  position: absolute;
-  left: 3px;
-  right: 3px;
-  top: 3px;
-  bottom: 3px;
-  transition: background-color .3s cubic-bezier(.25,.46,.45,.94);
-  z-index: -1;
-}
+// .card-primary:before {
+//   margin: 300px;
+//   content: "";
+//   position: absolute;
+//   left: 3px;
+//   right: 3px;
+//   top: 3px;
+//   bottom: 3px;
+//   transition: background-color .3s cubic-bezier(.25,.46,.45,.94);
+//   z-index: -1;
+// }
 
-.button-primary__corners {
+.card-primary__corners {
   background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
   linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
   linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
@@ -51,20 +56,26 @@ a {
   linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
   linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
   background-repeat: no-repeat;
-  background-size: 3px 3px;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 1s;
-
+  background-size: 3px 3px
 }
 
-.button-primary:after, .button-primary__corners {
+
+.card-primary:after, .card-primary__corners {
   bottom: 0;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
+}
+
+
+.img-show {
+  width:50%;
+  justify-content: left;
+}
+
+
+.grid-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
