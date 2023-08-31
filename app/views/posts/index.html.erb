@@ -2,39 +2,49 @@
   <h1>Threads</h1>
 </div>
 
+<div class="container chatroom"
+  data-controller="chatroom-subscription"
+  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+>
+  <h1>#<%= @post.event.title%></h1>
 
-<div data-controller="toggle">
-  <button class="btn btn-outline-primary" data-action="click->toggle">Post a thread</button>
-  <div class="body-test">
-    <%= simple_form_for(@post, url: event_posts_path) do |f| %>
-      <%= f.error_notification %>
-      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-      <div class="form-inputs">
-        <%= f.input :title %>
-        <%= f.input :topic, collection: %w[line vibe general social] %>
-        <%= f.simple_fields_for :comments do |m| %>
-          <%= m.input :content %>
+  <div class="posts" data-chatroom-subscription-target="posts">
+
+
+    <div class="container">
+      <div class="index-grid">
+        <% if @posts.any? %>
+          <% @posts.each do |post| %>
+            <div class="my-5">
+              <%= render "posts/post", post: post %>
+            </div>
+          <% end %>
+        <% else %>
+          <em>No threads yet..</em>
         <% end %>
       </div>
-      <div class="form-actions">
-        <%= f.button :submit, class: "btn btn-primary mt-2"%>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="index-grid">
-    <% if @posts.any? %>
-      <% @posts.each do |post| %>
-        <div class="my-5">
-          <p> <%= post.user.username %> </p>
-          <p> About: <%= post.title %> </p>
-          <p> Topic: <%= post.topic %> </p>
-          <p> <%= "Comment: #{post.comments.first.content}" if !post.comments.empty? %> </p>
+
+  <div data-controller="toggle">
+    <button class="btn btn-outline-primary" data-action="click->toggle">Post a thread</button>
+    <div class="body-test">
+      <%= simple_form_for [@chatroom, @post, url: event_posts_path],
+      html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+        <div class="form-inputs">
+          <%= f.input :title %>
+          <%= f.input :topic, collection: %w[line vibe general social] %>
+          <%= f.simple_fields_for :comments do |m| %>
+            <%= m.input :content %>
+          <% end %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, class: "btn btn-primary mt-2"%>
         </div>
       <% end %>
-    <% else %>
-      <em>No threads yet..</em>
-    <% end %>
+    </div>
   </div>

@@ -1,0 +1,19 @@
+.mapboxgl-popup {
+  max-width: 200px;
+  color: white;
+  height: 50px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+}
+
+.fa-location-dot {
+  font-size: 30px;
+}
+
+.mapboxgl-popup-tip {
+  display: none;
+}

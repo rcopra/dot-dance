@@ -1,11 +1,11 @@
+
 <%# <div class="header-show"> %>
     <%if current_user == @event.user  %>
       <%= link_to "Edit the event", edit_event_path(@event) %>
       <%= link_to 'Delete this event', @event, data: {turbo_method: :delete}%>
-    <% end %>
-      <%= link_to "Back to events", events_path %>
-<%# </div> %>
+<% end %>
 
+<%= link_to "Back to events", events_path %>
 
   <div class="content">
     <div class="show-card-info">
@@ -30,7 +30,25 @@
             <%= link_to "Log in or Sign up to RSVP", new_user_session_path %>
           <% end %>
           </div>
+
+<div style="width: 300px; height: 300px"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+</div>
         </div>
       </div>
+    <div class="attending-button" data-controller="change-button" data-action="click->change-button#fire">
+      <% if current_user %>
+        <% if current_user.attending?(@event) %>
+          <%= button_to "No longer attending", event_attendee_path(@event, current_user.attendee_for_event(@event)), method: :delete %>
+        <% else %>
+          <%= button_to "RSVP", event_attendees_path(@event), method: :post %>
+        <% end %>
+      <% else %>
+        <%= link_to "Log in or Sign up to RSVP", new_user_session_path %>
+      <% end %>
+    </div>
   </div>
 </div>
