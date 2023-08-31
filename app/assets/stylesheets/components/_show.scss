@@ -6,10 +6,10 @@
   padding: 10px;
   position: relative;
   border: 0.1px solid (255, 255, 255, 0.2);
-  min-width: 90%;
+  width: 100%;
   border: 0.5px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  width: 80%;
+
   font-family: 'Poppins', sans-serif;
   font-weight: lighter;
 
@@ -34,17 +34,6 @@ a {
 
 }
 
-// .card-primary:before {
-//   margin: 300px;
-//   content: "";
-//   position: absolute;
-//   left: 3px;
-//   right: 3px;
-//   top: 3px;
-//   bottom: 3px;
-//   transition: background-color .3s cubic-bezier(.25,.46,.45,.94);
-//   z-index: -1;
-// }
 
 .card-primary__corners {
   background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
@@ -70,12 +59,13 @@ a {
 
 
 .img-show {
-  width:50%;
-  justify-content: left;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-
-.grid-show {
+.show-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
 }
