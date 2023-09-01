@@ -7,7 +7,7 @@
             <li>
               <p><%= attendee.event.title %>, <%= attendee.event.date %>, <%= attendee.event.address %>, <img src="<%= attendee.event.poster_image %>"></p>
             </li>
-            <%= link_to "TO CHAT", event_posts_path(attendee.event) %>
+            <%= link_to "TO THREADS", event_posts_path(attendee.event) %>
           <% end %>
         </ul>
       </div>
