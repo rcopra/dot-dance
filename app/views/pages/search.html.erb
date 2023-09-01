@@ -1,0 +1,24 @@
+<div class="wrapper-form">
+  <div class="search-form mb-3 py-3">
+  <%= form_with url: search_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+                      params[:query],
+                      class: "form-control",
+                      placeholder: "Search for events..."
+    %>
+    <%= submit_tag "Search", name: ""%>
+  <% end %>
+  </div>
+</div>
+
+<% if params[:query].present? %>
+  <div class="index-grid">
+    <% if @events.any? %>
+      <% @events.each do |event| %>
+        <%= render "events/events_card", event: event %>
+      <% end %>
+    <% else %>
+      <em>Sorry, no events found.</em>
+    <% end %>
+  </div>
+<% end %>
