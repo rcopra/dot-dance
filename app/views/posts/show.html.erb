@@ -17,7 +17,8 @@
   <%= f.input :content,
     label: false,
     placeholder: "Comment ##{@post.title}",
-    wrapper_html: {class: "flex-grow-1"}
+    wrapper_html: {class: "flex-grow-1 mb-0", id: "post_comment"},
+    input_html: {class: "h-100"}
   %>
-  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+  <%= f.submit "send", class: "button-send" %>
 <% end %>

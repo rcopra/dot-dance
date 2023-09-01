@@ -2,6 +2,7 @@ class AttendeesController < ApplicationController
   before_action :authenticate_user!
 
   def create
+    raise
     @event = Event.find(params[:event_id])
     @attendee = Attendee.new
     @attendee.event = @event
