@@ -1,16 +1,78 @@
-  <div class="homepage-grid">
-    <div class="dashboard-card">
-      <h6>Your RSVP's:</h6>
+<div class="show-grid mt-2">
+  <div class="card-primary">
+    <div class="card-primary__corners"></div>
       <div id="user_events">
         <ul>
+          <h1>Agenda</h1>
           <% @user.attendees.each do |attendee| %>
-            <li>
-              <p><%= attendee.event.title %>, <%= attendee.event.date %>, <%= attendee.event.address %>, <img src="<%= attendee.event.poster_image %>"></p>
-            </li>
+            <p>
+              <%= attendee.event.title %>,
+              <%= attendee.event.date %>,
+              <%= attendee.event.address %>,
+              <img src="<%= attendee.event.poster_image %>">
+            </p>
             <%= link_to "TO THREADS", event_posts_path(attendee.event) %>
           <% end %>
         </ul>
       </div>
     </div>
+  <div class="show-info-dashboard">
+    <div class="card-primary mb-2">
+
+      <div class="card-primary__corners"></div>
+      <div id="user_events">
+          <h6>Event 1</h6>
+          <p>Sven Marquardt</p>
+          <p>Am Wriezener bhf</p>
+          <p>10243 Berlin</p>
+      </div>
+    </div>
+  <div class="card-primary">
+    <div class="card-primary__corners"></div>
+    <div id="user_events">
+      <h6>Preferences</h6>
+      <p>Intense</p>
+      <p>Techno</p>
+      <p>No tourists</p>
+    </div>
+  </div>
+  <div class="card-primary mt-2">
+    <div class="card-primary__corners"></div>
+    <div id="user_events">
+      <h6>Favourites</h6>
+      <p>Berghain</p>
+      <p>Saule</p>
+      <p>Panorama</p>
+      <p>Klubnacht</p>
+    </div>
   </div>
 </div>
+</div>
+
+<div class="dashboard-grid__recommendations mt-2">
+   <div class="card-primary mb-2">
+      <div class="card-primary__corners"></div>
+      <div id="user_events">
+          <h6>Account</h6>
+          <p>Sven Marquardt</p>
+          <p>Am Wriezener bhf</p>
+          <p>10243 Berlin</p>
+      </div>
+    </div>
+      <div class="card-primary mb-2">
+        <div class="card-primary__corners"></div>
+          <h6>Account</h6>
+          <p>Sven Marquardt</p>
+          <p>Am Wriezener bhf</p>
+          <p>10243 Berlin</p>
+        </div>
+      <div class="card-primary mb-2">
+        <div class="card-primary__corners"></div>
+          <div id="user_events">
+            <h6>Account</h6>
+            <p>Sven Marquardt</p>
+            <p>Am Wriezener bhf</p>
+            <p>10243 Berlin</p>
+          </div>
+        </div>
+      </div>

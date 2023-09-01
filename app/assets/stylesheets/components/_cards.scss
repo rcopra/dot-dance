@@ -14,9 +14,10 @@
     font-family: 'Poppins', sans-serif;
   }
 
-  h6 {
+  h1, h6 {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+
   }
 }
 
@@ -31,7 +32,6 @@ a {
   &:hover, &:focus {
     color: #D5F34C;
   }
-
 }
 
 .card-primary__corners {

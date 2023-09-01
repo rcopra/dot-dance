@@ -5,3 +5,10 @@
   column-gap: 5px;
   width: 100%;
 }
+
+.dashboard-grid__recommendations {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+
+}
