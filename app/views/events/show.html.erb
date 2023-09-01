@@ -1,3 +1,4 @@
+
 <div>
     <%if current_user == @event.user  %>
       <%= link_to "Edit the event", edit_event_path(@event) %>
@@ -34,7 +35,7 @@
           <% if current_user.attending?(@event) %>
             <%= button_to "No longer attending", event_attendee_path(@event, current_user.attendee_for_event(@event)), method: :delete %>
           <% else %>
-            <%= button_to "RSVP", event_attendees_path(@event), method: :post, data: {
+            <%= link_to "Attend", event_attendees_path(@event), method: :post, data: {
               controller: "alert",
               alert_title_value: "See you at #{@event.title}!",
               alert_html_value: "#{@event.date}",
