@@ -6,7 +6,14 @@
 <% end %>
 
 <div class="show-grid mt-2">
-  <img class="img-show" src="<%= @event.poster_image %>">
+  <div>
+    <img class="img-show" src="<%= @event.poster_image %>">
+    <div class="card-primary mt-2">
+      <div class="card-primary__corners"></div>
+      <h6>Description:</h6>
+      <p><%= @event.description %></p>
+    </div>
+  </div>
   <div class="show-info">
     <div class="card-primary">
       <div class="card-primary__corners"></div>
@@ -64,12 +71,7 @@
   </div>
 </div>
 
-  <div class="card-primary mt-2">
-    <div class="card-primary__corners"></div>
-      <h6>Description:</h6>
-      <p><%= @event.description %></p>
-    </div>
-  </div>
+
 
 
   <div style="width: 96vw; height: 150px; margin-top: 10px;"
