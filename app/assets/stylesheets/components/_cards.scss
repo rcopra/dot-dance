@@ -1,0 +1,58 @@
+
+.card-primary {
+  color: #fff;
+  display: inline-block;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  border: 0.1px solid (255, 255, 255, 0.2);
+  width: 100%;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+
+  h6 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Anonymous pro', monospace;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+
+  &:hover, &:focus {
+    color: #D5F34C;
+  }
+
+}
+
+
+.card-primary__corners {
+  background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
+  linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
+  linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
+  linear-gradient(180deg,#fff 1px,transparent 0) 100% 0,
+  linear-gradient(270deg,#fff 1px,transparent 0) 100% 100%,
+  linear-gradient(0deg,#fff 1px,transparent 0) 100% 100%,
+  linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
+  linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 3px 3px
+}
+
+
+.card-primary:after, .card-primary__corners {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
