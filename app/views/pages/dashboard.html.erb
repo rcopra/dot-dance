@@ -1,8 +1,3 @@
-<div class="header-dashboard">
-   <h1>Welcome to .games, <%= current_user.email %> </h1>
-</div>
-
-
   <div class="homepage-grid">
     <div class="dashboard-card">
       <h6>Your RSVP's:</h6>
@@ -10,11 +5,11 @@
         <ul>
           <% @user.attendees.each do |attendee| %>
             <li>
-               <p> 🍄 <%= attendee.event.title %>, <%= attendee.event.date %>, <%= attendee.event.address %>, <img src="<%= attendee.event.poster_image %>"></p>
+              <p><%= attendee.event.title %>, <%= attendee.event.date %>, <%= attendee.event.address %>, <img src="<%= attendee.event.poster_image %>"></p>
             </li>
+            <%= link_to "TO THREADS", event_posts_path(attendee.event) %>
           <% end %>
         </ul>
-            <%= link_to "", events_path %>
       </div>
     </div>
   </div>
