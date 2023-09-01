@@ -5,5 +5,5 @@
     <p> Topic: <%= post.topic %> </p>
     <i><%= post.created_at.strftime("%a %b %e at %l:%M %p") %></i>
   </small>
-    <p> <%= "Comment: #{post.comments.first.content}" if !post.comments.empty? %> </p>
+    <p> <%= "#{post.comments.first.content}" if !post.comments.empty? %> </p>
 </div>
