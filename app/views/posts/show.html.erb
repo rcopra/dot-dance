@@ -9,7 +9,6 @@
       <%= render "comments/comment", comment: comment %>
     <% end %>
   </div>
-</div>
 
 <%= simple_form_for [@post, @comment],
   html: { data: { action: "turbo:submit-end->post-subscription#resetForm" }, class: "d-flex" } do |f|
@@ -22,3 +21,5 @@
   %>
   <%= f.submit "send", class: "button-send" %>
 <% end %>
+
+</div>

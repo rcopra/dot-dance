@@ -13,8 +13,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-   <%= render "shared/header" %>
+  <body class="<%= cookies[:theme] %>">
+    <%= render "shared/header" %>
+    <div class="mt-5">
+      <%= link_to 'light', set_theme_path(theme: 'light') %>
+      <%= link_to 'dark', set_theme_path(theme: 'dark') %>
+    </div>
     <div class="body-test">
       <%= render "shared/flashes" %>
       <%= yield %>
