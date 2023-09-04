@@ -21,12 +21,12 @@ class PostsController < ApplicationController
       @comment.post = @post
       @comment.user = current_user
       if @comment.save
-        # PostsChannel.broadcast_to(
-        #   "some_channel",
-        #   render_to_string(partial: "post", locals: { post: @post })
-        # )
-        # head :ok
-        redirect_to event_posts_path, notice: "Thread was successfully created."
+        PostsChannel.broadcast_to(
+          @event,
+          render_to_string(partial: "post", locals: { post: @post })
+        )
+        head :ok
+        # redirect_to event_posts_path, notice: "Thread was successfully created."
       else
         render :new, status: :unprocessable_entity
       end
