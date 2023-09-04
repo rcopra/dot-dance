@@ -9,7 +9,7 @@ export default class extends Controller {
   connect() {
     this.channel = createConsumer().subscriptions.create(
       { channel: "PostsChannel", event_id: this.eventIdValue },
-      { received: data => console.log("hello") }
+      { received: data => this.postsTarget.insertAdjacentHTML("afterbegin", data) }
     )
   }
 }
