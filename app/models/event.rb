@@ -15,4 +15,8 @@ class Event < ApplicationRecord
   enum status: [ :pending, :rejected, :accepted ]
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+  validates :genre, presence: true, inclusion: { in: %w[techno, house, acid, garage, minimal] }
+  validates :intensity, presence: true, inclusion: { in: %w[++, +, -, --] }
+  validates :queuing_time, presence: true, inclusion: { in: %w[long, average, short] }
+  validates :door_policy, presence: true, inclusion: { in: %w[strict, average, easy] }
 end
