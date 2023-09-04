@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
@@ -16,13 +16,16 @@
   </head>
 
   <body class="<%= cookies[:theme] %>">
-    <%= render "shared/header" %>
-    <div class="mt-5">
-      <%= link_to 'light', set_theme_path(theme: 'light') %>
-      <%= link_to 'dark', set_theme_path(theme: 'dark') %>
+  <div class="header-show">
+      <% if cookies[:theme] == "light" %>
+        <%= link_to 'dark', set_theme_path(theme: 'dark') %>
+      <% else %>
+        <%= link_to 'light', set_theme_path(theme: 'light') %>
+      <% end %>
+    <h1 style="flex: 1;text-align: center; margin-top: 7px;  "><%=link_to ".DANCE", events_path%></h1>
+  <%= link_to dashboard_path do %><i class="fa-regular fa-user"  style="text-align: left;"></i>
+  <% end %>
     </div>
-    <div class="body-test">
-      <%= render "shared/flashes" %>
       <%= yield %>
     </div>
     <%= render "shared/footer" %>
