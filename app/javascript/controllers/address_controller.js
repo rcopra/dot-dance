@@ -8,10 +8,13 @@ export default class extends Controller {
 
   connect() {
     console.log('Address controller is connected');
+    if(window.google) {
+        this.initGoogle();
+    }
   }
 
   initGoogle() {
-    // Setup autocomplete
+    // setup autocomplete
     console.log("Google maps is initialized and the controller knows about it. ")
     console.log(google);
     this.autocomplete = new google.maps.places.Autocomplete(this.inputTarget, {
