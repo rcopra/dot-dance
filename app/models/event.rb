@@ -10,6 +10,7 @@ class Event < ApplicationRecord
   validates :description, presence: true
   # validates :poster_image, presence: true <- Commenting this out while I work on event adding so I don't need to add a photo every time
   validates :address, presence: true
+  validates :date, presence: true
   has_one_attached :photo
   validates :club_id, presence: true, unless: ->(event) { event.address.present? }
   enum status: [ :pending, :rejected, :accepted ]
@@ -19,7 +20,5 @@ class Event < ApplicationRecord
   validates :intensity, presence: true, inclusion: { in: INTENSITIES }
   validates :queuing_time, presence: true, inclusion: { in: %w[long average short] }
   validates :door_policy, presence: true, inclusion: { in: %w[strict average easy] }
-
   INTENSITIES = %w[low medium high extreme]
-  
 end

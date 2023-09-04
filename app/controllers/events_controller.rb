@@ -23,6 +23,7 @@ class EventsController < ApplicationController
       if @event.save
         redirect_to @event, notice: "Event was successfully created."
       else
+        puts @event.errors.full_messages
         render :new, status: :unprocessable_entity
       end
     end
@@ -55,6 +56,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :description, :poster_image, :address, :genre, :intensity, :queuing_time, :door_policy)
+    params.require(:event).permit(:title, :date, :description, :poster_image, :address, :genre, :intensity, :queuing_time, :door_policy)
   end
 end
