@@ -1,10 +1,10 @@
 require 'faker'
 
-User.destroy_all
+Lineup.destroy_all
 Artist.destroy_all
 Club.destroy_all
 Event.destroy_all
-Lineup.destroy_all
+User.destroy_all
 
 # Create users
 
@@ -126,7 +126,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNzVmZmZlOGI0ZDA2OTEzZjMwNGRiYjExMTAxYWQ2ZjQ3NTRjM2M4YS5qcGc=",
     user_id: 2,
     club_id: 2,
-    address: "Coubertinplatz, 14053 Berlin"
+    address: "Coubertinplatz, 14053 Berlin",
+    genre: "house",
+    intensity: "medium",
+    queuing_time: "short",
+    door_policy: "easy"
   },
   {
     title: "House of Lunacy - Midsummer Dreaming",
@@ -141,7 +145,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNGNlYWI5YWQ2ODU5YWQ5ZGQ2MDcyMzdhYzE0NTdiZWJjZDkzM2ZlMy5qcGc=",
     user_id: 2,
     club_id: 6,
-    address: "Alt Stralau 70, 10245 Berlin"
+    address: "Alt Stralau 70, 10245 Berlin",
+    genre: "acid",
+    intensity: "medium",
+    queuing_time: "average",
+    door_policy: "easy"
   },
   {
     title: "BITE Nite 5 Years",
@@ -150,7 +158,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vOGRlMGUyMWZhNjA4ZDY0NzQxYzA4MTk3MDM4MGM0MzM2ZTgyNjMxNi5qcGc=",
     user_id: 2,
     club_id: 1,
-    address: "70 Am Wriezener Bahnhof, 10243 Berlin"
+    address: "70 Am Wriezener Bahnhof, 10243 Berlin",
+    genre: "techno",
+    intensity: "extreme",
+    queuing_time: "long",
+    door_policy: "strict"
   },
   {
     title: "SÄULE",
@@ -159,7 +171,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNWVjODVmYThjODlkYWQ0MTAwOWY3YjM1OTE2NzQ4ZGE4OWNlYWQ2Ny5wbmc=",
     user_id: 2,
     club_id: 1,
-    address: "70 Am Wriezener Bahnhof, 10243 Berlin"
+    address: "70 Am Wriezener Bahnhof, 10243 Berlin",
+    genre: "techno",
+    intensity: "extreme",
+    queuing_time: "long",
+    door_policy: "strict"
   },
   {
     title: "Radiant Records",
@@ -168,7 +184,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNDZkNjQyYTE5ZmU0MzkyYzJiMTM3NTQ4MjQ5ODc1NThjYjZkNjhjNy5wbmc=",
     user_id: 2,
     club_id: 1,
-    address: "70 Am Wriezener Bahnhof, 10243 Berlin"
+    address: "70 Am Wriezener Bahnhof, 10243 Berlin",
+    genre: "techno",
+    intensity: "extreme",
+    queuing_time: "long",
+    door_policy: "strict"
   },
   {
     title: "NEVER SLEEP w/ Gabber Eleganza, Snake Gang live, Soraya & Lizzitsky",
@@ -178,7 +198,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vZTcwOGYyYmNlZWQ5MzMxZjM5OTVjZjcwYTgzZWQ0MzQxMzJkYmZmNS5qcGc=",
     user_id: 2,
     club_id: 7,
-    address: "Schnellerstrasse 137, 12439 Berlin"
+    address: "Schnellerstrasse 137, 12439 Berlin",
+    genre: "techno",
+    intensity: "high",
+    queuing_time: "long",
+    door_policy: "strict"
   },
   {
     title: "Grounded Theory [58]",
@@ -187,7 +211,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vMWE1ZDU2MGJkZjhhYmQ4NGU1MjA3NTU0MGZmZTEwZTgwOGU2YzE0OC5qcGc=",
     user_id: 2,
     club_id: 7,
-    address: "Schnellerstrasse 137, 12439 Berlin"
+    address: "Schnellerstrasse 137, 12439 Berlin",
+    genre: "techno",
+    intensity: "high",
+    queuing_time: "long",
+    door_policy: "strict"
   },
   {
     title: "ANOMALIE x OXYGEN",
@@ -196,7 +224,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vODA4NTZmODE3OWEzYmViMTI0OTBjYWQ1ZTVmMTcwMDY4MTMwMmQ3ZS5qcGc=",
     user_id: 2,
     club_id: 8,
-    address: "Storkower Str. 123, 10407 Berlin"
+    address: "Storkower Str. 123, 10407 Berlin",
+    genre: "techno",
+    intensity: "high",
+    queuing_time: "long",
+    door_policy: "average"
   },
   {
     title: "RFLXN x Gravity Network with Bailey Ibbs, Detroit In Effect, JKS, Kaiser & Neri J",
@@ -205,7 +237,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vYTMyODkxYjA4YzA4NjZlNzBhNDhjMDYwZGQzNDBiYWE3Zjg1OTk4ZS5qcGc=",
     user_id: 2,
     club_id: 7,
-    address: "Schnellerstrasse 137, 12439 Berlin"
+    address: "Schnellerstrasse 137, 12439 Berlin",
+    genre: "techno",
+    intensity: "medium",
+    queuing_time: "average",
+    door_policy: "average"
   },
   {
     title: "Intercell - Summer Series - Else Berlin",
@@ -216,7 +252,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNWMyZWViMDU0MzhiMGNiMGQ1MWQ2NThiMTAzMjg4ZTEwOWNhNjZlNS5wbmc=",
     user_id: 2,
     club_id: 9,
-    address: "An den Treptowers 10, 12435 Berlin"
+    address: "An den Treptowers 10, 12435 Berlin",
+    genre: "techno",
+    intensity: "medium",
+    queuing_time: "average",
+    door_policy: "average"
   },
   {
     title: "MATTER",
@@ -234,7 +274,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNTViOTQ4NmI1NGUyNzAwYmNkNzdmM2RjYmU3N2FiODY2NGM5YmI3Yy5qcGc=",
     user_id: 2,
     club_id: 9,
-    address: "An den Treptowers 10, 12435 Berlin"
+    address: "An den Treptowers 10, 12435 Berlin",
+    genre: "techno",
+    intensity: "medium",
+    queuing_time: "average",
+    door_policy: "average"
   },
   {
     title: "ungesund",
@@ -246,7 +290,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vODI3ZGZkNDc1YTVmOGY5ODMwNzM4MWJiMjMwYmE0Nzk5ZGZjMTI3Ni5qcGc=",
     user_id: 2,
     club_id: 3,
-    address: "Markgrafendamm 24c, 10245 Berlin"
+    address: "Markgrafendamm 24c, 10245 Berlin",
+    genre: "house",
+    intensity: "high",
+    queuing_time: "average",
+    door_policy: "average"
   },
   {
     title: "10 JAHRE DIFFUSE REALITY",
@@ -263,7 +311,11 @@ events = [
     poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vMDI4YjYyM2VhOGIzMjZmZDVkZDY2NWU5ZmYxNzNkZjVlY2Q2N2U5ZC5qcGc=",
     user_id: 2,
     club_id: 3,
-    address: "Markgrafendamm 24c, 10245 Berlin"
+    address: "Markgrafendamm 24c, 10245 Berlin",
+    genre: "house",
+    intensity: "medium",
+    queuing_time: "average",
+    door_policy: "average"
   }
 ]
 
@@ -276,10 +328,14 @@ events.each do |event|
     date: event[:date],
     club_id: event[:club_id],
     status: 2,
-    poster_image: event[:poster_image]
+    poster_image: event[:poster_image],
+    genre: event[:genre],
+    intensity: event[:intensity],
+    queuing_time: event[:queuing_time],
+    door_policy: event[:door_policy]
   )
 
-  rand(1..5).times do
+  3.times do
     Lineup.create!(
       artist: Artist.offset(rand(Artist.count)).first,
       event_id: new_event.id
