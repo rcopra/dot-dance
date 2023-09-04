@@ -4,9 +4,3 @@ import "controllers"
 import "@popperjs/core"
 import "bootstrap"
 import "@rails/actioncable"
-
-window.initMap = () => {
-  const event = new Event("MapLoaded")
-  event.initEvent("map-loaded", true, true);
-  window.dispatchEvent(event)
-}
