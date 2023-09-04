@@ -8,31 +8,35 @@
   width: 100%;
   border: 0.5px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  font-weight: lighter;
 
   p {
     font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
   }
 
   h1, h6 {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bolder;
+  }
 
+  a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Anonymous pro', monospace !important;
+      text-transform: uppercase;
+      justify-content: center;
+      display: inline-block;
+      background-color: #D5F34C;
+
+      &:hover, &:focus {
+        color:rgba(31, 38, 135, 0.37);
+      }
   }
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  font-family: 'Anonymous pro', monospace !important;
-  text-transform: uppercase;
-  justify-content: center;
-  display: inline-block;
-
-  &:hover, &:focus {
-    color: #D5F34C;
-  }
-}
 
 .card-primary__corners {
   background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
