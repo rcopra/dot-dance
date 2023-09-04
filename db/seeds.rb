@@ -327,7 +327,7 @@ events.each do |event|
     user: party_promoter,
     date: event[:date],
     club_id: event[:club_id],
-    status: 2,
+    # status: 2,
     poster_image: event[:poster_image],
     genre: event[:genre],
     intensity: event[:intensity],
