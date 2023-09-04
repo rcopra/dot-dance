@@ -4,7 +4,9 @@
       <%= simple_form_for(@event) do |f| %>
         <%= f.input :title %>
         <%= f.input :date %>
-        <%= f.input :address %>
+          <div data-controller="address" data-action="map-loaded@window->address#initGoogle">
+        <%= f.input :address, html: { autocomplete: 'off' }, input_html: { data: { address_target: 'input' } } %>
+          </div>
         <%= f.input :photo, as: :file %>
         <%= f.submit %>
       <% end %>
