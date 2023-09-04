@@ -23,6 +23,7 @@ class EventsController < ApplicationController
       if @event.save
         redirect_to @event, notice: "Event was successfully created."
       else
+        puts @event.errors.full_messages
         render :new, status: :unprocessable_entity
       end
     end

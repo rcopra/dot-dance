@@ -8,8 +8,11 @@
                     input_html: { data: { controller: "datepicker" } } %>
           <div data-controller="address" data-action="map-loaded@window->address#initGoogle">
         <%= f.input :address, html: { autocomplete: 'off' }, input_html: { data: { address_target: 'input' } } %>
+        <input type="hidden" data-address-target="longitude" />
+        <input type="hidden" data-address-target="latitude" />
           </div>
           <%= f.input :genre, collection: %w[techno house acid garage minimal]%>
+<%= f.input :description %>
 <%= f.input :intensity, collection: %w[low medium high extreme]%>
 <%= f.input :queuing_time, collection: %w[long average short] %>
 <%= f.input :door_policy, collection: %w[strict average easy] %>
