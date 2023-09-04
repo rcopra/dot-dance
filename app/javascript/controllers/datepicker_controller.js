@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import flatpickr from "flatpickr"; // You need to import this to use new flatpickr()
+import flatpickr from "flatpickr"; 
 
 // Connects to data-controller="datepicker"
 export default class extends Controller {
@@ -7,4 +7,3 @@ export default class extends Controller {
     flatpickr(this.element)
   }
 }
-

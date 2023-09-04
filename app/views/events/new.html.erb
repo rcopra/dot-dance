@@ -6,10 +6,13 @@
         <%= f.input :date,
                     as: :string,
                     input_html: { data: { controller: "datepicker" } } %>
-<%= f.input :address,
-  input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
-  wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
-%>
+          <div data-controller="address" data-action="map-loaded@window->address#initGoogle">
+        <%= f.input :address, html: { autocomplete: 'off' }, input_html: { data: { address_target: 'input' } } %>
+          </div>
+          <%= f.input :genre, collection: %w[techno house acid garage minimal]%>
+<%= f.input :intensity, collection: %w[low medium high extreme]%>
+<%= f.input :queuing_time, collection: %w[long average short] %>
+<%= f.input :door_policy, collection: %w[strict average easy] %>
         <%= f.input :photo, as: :file %>
         <%= f.submit %>
       <% end %>
