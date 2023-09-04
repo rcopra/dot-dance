@@ -8,7 +8,7 @@ class Event < ApplicationRecord
   has_many :posts
   validates :title, presence: true
   validates :description, presence: true
-  validates :poster_image, presence: true
+  # validates :poster_image, presence: true <- Commenting this out while I work on event adding so I don't need to add a photo every time
   validates :address, presence: true
   has_one_attached :photo
   validates :club_id, presence: true, unless: ->(event) { event.address.present? }
