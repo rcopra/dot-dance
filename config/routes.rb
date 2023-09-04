@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   end
   resources :artists, only: [:show]
   resources :clubs, only: [:show]
+  get 'set_theme', to: 'themes#update'
 end

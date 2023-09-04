@@ -1,17 +1,31 @@
 class AttendeesController < ApplicationController
   before_action :authenticate_user!
+  # protect_from_forgery with: :null_session
 
   def create
-    raise
+
     @event = Event.find(params[:event_id])
     @attendee = Attendee.new
     @attendee.event = @event
     @attendee.user = current_user
-    if @attendee.save
-      redirect_to @event, notice: "You're attending"
-    else
-      render :new, status: :unprocessable_entity
-    end
+
+
+
+
+   @attendee.save
+
+      # respond_to do |format|
+      #   format.html { redirect_to event_path(@event) }
+      #   format.text { render partial: "events/sweet_alert", locals: {event: @event}, formats: [:html] }
+      # end
+      # # redirect_to @event, notice: "You're attending"
+    # else
+    #   render :new, status: :unprocessable_entity
+    # end
+  end
+
+  def update
+    raise
   end
 
   def destroy
