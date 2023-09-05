@@ -9,7 +9,11 @@
         </div>
       </div>
       <div class="card-content">
-        <p><%= event.club.name %></p>
+  <% if event.club %>
+    <p><%= event.club.name %></p>
+  <% else %>
+    <p><%= event.address %></p>
+  <% end %>
         <p class="card-categories" > intense | long queue | weekender </p>
       </div>
       <div class="card-grid"></div>

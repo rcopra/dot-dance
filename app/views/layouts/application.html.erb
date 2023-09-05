@@ -11,21 +11,23 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href=
+    "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&libraries=places&callback=initMap" async defer data-turbolinks-eval="false"></script>
 
   </head>
 
   <body class="<%= cookies[:theme] %>">
-    <%= render "shared/header" %>
-    <div class="mt-5">
+  <div class="header-show">
       <% if cookies[:theme] == "light" %>
-        <%= link_to <i class="fa-solid fa-moon" style="color: #000000;"></i>, set_theme_path(theme: 'dark') %>
+        <%= link_to 'dark', set_theme_path(theme: 'dark') %>
       <% else %>
-        <%= link_to <i class="fa-regular fa-lightbulb" style="color: #ffffff;"></i>, set_theme_path(theme: 'light') %>
+        <%= link_to 'light', set_theme_path(theme: 'light') %>
       <% end %>
+    <h1 style="flex: 1;text-align: center; margin-top: 7px;  "><%=link_to ".DANCE", events_path%></h1>
+  <%= link_to dashboard_path do %><i class="fa-regular fa-user"  style="text-align: left;"></i>
+  <% end %>
     </div>
-    <div class="body-test">
-      <%= render "shared/flashes" %>
       <%= yield %>
     </div>
     <%= render "shared/footer" %>
