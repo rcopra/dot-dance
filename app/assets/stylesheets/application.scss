@@ -6,36 +6,49 @@
 @import "pages/index";
 
 :root {
-  --light-bg-color: silver;
-  --light-text-color: white;
+  --light-bg-color: white;
+  --light-text-color: black;
   --dark-bg-color: black;
   --dark-text-color: white;
+  // --light-bg-color-card: red;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: var(--dark-text-color);
+      color: var(--dark-text-color);
       background: linear-gradient(270deg, rgba(31,0,71,1) 0%, rgba(23,0,64,1) 32%, rgba(0,0,0,1) 100%);
       background-repeat: none;
-      padding: 7vh 0vw 7vh 0vw;
+      padding: 5vh 1vw 5vh 1vw;
       min-height: 100vh;
-      color: white;
   }
 
   body.light {
-    background: var(--light-bg-color);
-    color: var(--light-text-color);
+    background: white;
+    color: black;
+  }
+
+
+  // .card-content.adaptive {
+  //  color: red;
+  // }
+
+  .card-content.light {
+    color: blue;
   }
 }
 
 @media (prefers-color-scheme: light) {
   body {
-    background: var(--light-bg-color);
-    color: var(--light-text-color);
+    background: white;
+    color:  var(--light-bg-color-card);
   }
+
+
+
 
   body.dark {
     background: var(--dark-bg-color);
     color: var(--dark-text-color);
   }
+
 }

@@ -1,8 +1,8 @@
+
 .glass-card {
-  background: rgba( 255, 255, 255, 0.1 );
   color: white;
   text-transform: uppercase;
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( .5px );
   align-items: center;
   justify-content: center;
@@ -14,7 +14,7 @@
   background-size: cover;
   position: relative;
 
-    h1 {
+  h1 {
       color: white;
       font-family: 'Poppins', sans-serif;
       text-transform: uppercase;
@@ -23,37 +23,40 @@
 
 .layer {
   position: absolute;
-  background: black;
+  // background: rgba(0, 0, 0, 0.9);
   height: 100%;
   width: 100%;
-  opacity: 0.9;
 }
 
 .glass-card-corners {
-  background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
-  linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
-  linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
-  linear-gradient(180deg,#fff 1px,transparent 0) 100% 0,
-  linear-gradient(270deg,#fff 1px,transparent 0) 100% 100%,
-  linear-gradient(0deg,#fff 1px,transparent 0) 100% 100%,
-  linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
-  linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
-  background-repeat: no-repeat;
-  background-size: 2vh 2vh;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 1s;
-  width: 100%;
-  min-height: 350px;
-  height: auto;
-  transition: 1s;
+  // background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
+  // linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
+  // linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
+  // linear-gradient(180deg,#fff 1px,transparent 0) 100% 0,
+  // linear-gradient(270deg,#fff 1px,transparent 0) 100% 100%,
+  // linear-gradient(0deg,#fff 1px,transparent 0) 100% 100%,
+  // linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
+  // linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
+  // background-repeat: no-repeat;
+  // background-size: 2vh 2vh;
+  // bottom: 0;
+  // left: 0;
+  // position: absolute;
+  // right: 0;
+  // top: 0;
+  // transition: 1s;
+  // width: 100%;
+  // min-height: 350px;
+  // height: auto;
+  // transition: 1s;
 
   &:hover {
     background-size: 100vh 100vw
   }
+}
+
+.index-grid {
+  padding: 1vh;
 }
 
 .glass-card:after, .glass-card-corners {
@@ -121,13 +124,12 @@
   justify-content: space-evenly;
   bottom: 0;
   position: fixed;
-  border-top: #D5F34C solid 1.5px;
+  border-top: #D5F34C solid 2px;
   width: 100%;
   height: 8vh;
 }
 
-.card-footer-item {
-  color: white;
+.card-footer-item { 
   font-size: normal;
   font-family: 'Anonymous pro', monospace;
   justify-content: space-evenly;
