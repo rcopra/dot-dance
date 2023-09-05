@@ -14,9 +14,7 @@
     <link rel="stylesheet" href=
     "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&libraries=places&callback=initMap" async defer data-turbolinks-eval="false"></script>
-
   </head>
-
   <body class="<%= cookies[:theme] %>">
     <div class="header-show" style="background: <%= @background_header %>">
       <% if cookies[:theme] == "light" %>

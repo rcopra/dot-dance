@@ -19,7 +19,8 @@ class ApplicationController < ActionController::Base
   end
 
   def background_corners
-    @background_corners = cookies[:theme] == "light" ? "linear-gradient(90deg,#000 2px,transparent 0) 0 0,
+    @background_corners = cookies[:theme] == "light" ?
+    "linear-gradient(90deg,#000 2px,transparent 0) 0 0,
     linear-gradient(180deg,#000 2px,transparent 0) 0 0,
     linear-gradient(270deg,#000 2px,transparent 0) 100% 0,
     linear-gradient(180deg,#000 2px,transparent 0) 100% 0,
@@ -42,7 +43,8 @@ class ApplicationController < ActionController::Base
     transition: 1s;
     z-index: 12"
 
-    : "linear-gradient(90deg,#fff 1.5px,transparent 0) 0 0,
+    :
+    "linear-gradient(90deg,#fff 1.5px,transparent 0) 0 0,
     linear-gradient(180deg,#fff 1.5px,transparent 0) 0 0,
     linear-gradient(270deg,#fff 1.5px,transparent 0) 100% 0,
     linear-gradient(180deg,#fff 1.5px,transparent 0) 100% 0,
@@ -67,6 +69,7 @@ class ApplicationController < ActionController::Base
   def header_background
     @header_background = cookies[:theme] == "light" ? "rgba(255, 255, 255, 0.6);" : "rgba(0, 0, 0, 0.75);"
   end
+
 
   def corner_card
     @corner_card = cookies[:theme] == "light" ? "linear-gradient(90deg,#000 2px,transparent 0) 0 0,
@@ -93,6 +96,7 @@ class ApplicationController < ActionController::Base
     background-size: 5px 5px;
     bottom: 0;"
   end
+
 
   def img_show
     @img_show = cookies[:theme] == "light" ? "3px solid #D5F34C;" : "0"
