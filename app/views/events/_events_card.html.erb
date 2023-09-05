@@ -7,6 +7,7 @@
           <h1 style="color: <%= @color %>"><%= event.title %></h1>
         </div>
       </div>
+      
       <div class="card-content">
   <% if event.club %>
     <p style="color: <%= @color %>"><%= event.club.name %></p>
@@ -19,7 +20,7 @@
         <div class="card-footer">
         <div class="card-footer-item" style="color: <%= @color %>"><i class="fa fa-calendar fa-fw icon-button"></i> <%= event.date %></p></div>
         <div class="card-footer-item" style="color: <%= @color %>"><i class="fa-regular fa-user fa-fw icon-button"></i> 123</p></div>
-        <div class="card-footer-item" style="color: <%= @color %>"><%= link_to "INFO", event_path(event) %></div>
+        <div class="card-footer-item"><%= link_to "INFO", event_path(event), style:"color: #{@color}", class:"link" %></a></div>
         </div>
     </div>
   </div>

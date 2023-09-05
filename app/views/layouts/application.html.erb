@@ -14,21 +14,18 @@
     <link rel="stylesheet" href=
     "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&libraries=places&callback=initMap" async defer data-turbolinks-eval="false"></script>
-
   </head>
-
   <body class="<%= cookies[:theme] %>">
-  <div class="header-show">
+    <div class="header-show" style="background: <%= @background_header %>">
       <% if cookies[:theme] == "light" %>
-        <%= link_to 'dark', set_theme_path(theme: 'dark') %>
+      <%= link_to 'dark', set_theme_path(theme: 'dark'), style:"color: #{@color}" %>
       <% else %>
-        <%= link_to 'light', set_theme_path(theme: 'light') %>
+        <%= link_to 'light', set_theme_path(theme: 'light'), style:"color: #{@color}" %>
       <% end %>
-    <h1 style="color:red; flex: 1;text-align: center; margin-top: 7px;"><%=link_to ".DANCE", events_path%></h1>
-  <%= link_to dashboard_path do %><i class="fa-regular fa-user"  style="text-align: left;"></i>
+    <h1 style= "flex: 1;text-align: center; margin-top: 7px; color: <%= @color %>"><%=link_to ".DANCE", events_path, style:"color: #{@color}"%></h1>
+  <%= link_to dashboard_path do %><i class="fa-regular fa-user"  style="text-align: left; color: <%= @color %>"></i>
   <% end %>
     </div>
-    <h1 class="display-1">We are currently in <%= cookies[:theme] %> mode </h1>
       <%= yield %>
     </div>
     <%= render "shared/footer" %>
