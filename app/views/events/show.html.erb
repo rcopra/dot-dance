@@ -6,23 +6,42 @@
 
 <div class="show-grid mt-2">
   <div>
-    <img class="img-show" src="<%= @event.poster_image %>">
-      <div class="card-show mt-2">
-        <div class="card-primary__corners"></div>
-        <p><%= @event.description %></p>
+    <img class="img-show" style="border: <%= @img_show %>" src="<%= @event.poster_image %>">
+      <div class="card-show mt-2" style="box-shadow: <%= @box_shadow %>">
+        <div class="card-primary__corners" style="background: <%= @corner_card %>"></div>
+        <p style="color: <%= @color %>"><%= @event.description %></p>
       </div>
 
   </div>
   <div class="show-info">
-    <div class="card-primary">
-      <div class="card-primary__corners"></div>
-      <h6>Lineup:</h6>
+    <div class="card-primary" style="box-shadow: <%= @box_shadow %>">
+      <div class="card-primary__corners" style="background: <%= @corner_card %>"></div>
+      <h6 style="color: <%= @color %>">Lineup:</h6>
       <% @lineup.each do |i|%>
-        <p><%= i.artist.name %></p>
+        <p style="color: <%= @color %>"><%= i.artist.name %></p>
       <% end %>
     </div>
-      <div class="button-attend">
-    <div class=" button-attend__corners "></div>
+
+    <div class="card-primary mt-2" style="max-height: 130px; box-shadow: <%= @box_shadow %>">
+      <div class="card-primary__corners" style="background: <%= @corner_card %>"></div>
+      <h6 style="color: <%= @color %>">Location</h6>
+        <% if @event.club %>
+          <p style="color: <%= @color %>"><%= @event.club.name %></p>
+        <% else %>
+          <p style="color: <%= @color %>"><%= @event.address %></p>
+        <% end %>
+    </div>
+    <div class="card-primary mt-2">
+      <div class="card-primary__corners" style="max-height: 130px; box-shadow: <%= @box_shadow %>; background: <%= @corner_card %>"></div>
+      <h6 style="color: <%= @color %>">Date</h6>
+      <p style="color: <%= @color %>"><%= @event.date %></p>
+    </div>
+    <div class="card-primary mt-2" style="box-shadow: <%= @box_shadow %>">
+      <div class="card-primary__corners" style="background: <%= @corner_card %>"></div>
+      <h6 style="color: <%= @color %>">Attending:</h6>
+      <p style="color: <%= @color %>"> 137</p>
+    </div>
+    <div class="button-attend" style="box-shadow: <%= @box_shadow %>; background: <%= @button_attend %>">
       <div class="attending-button" data-controller="change-button" data-action="click->change-button#fire">
           <% if current_user %>
           <% if current_user.attending?(@event) %>
@@ -45,39 +64,19 @@
         <% end %>
       </div>
   </div>
-    <div class="card-primary mt-2" style="max-height: 130px">
-      <div class="card-primary__corners"></div>
-      <h6>Location</h6>
-  <% if @event.club %>
-    <p><%= @event.club.name %></p>
-  <% else %>
-    <p><%= @event.address %></p>
-  <% end %>
-    </div>
-    <div class="card-primary mt-2">
-      <div class="card-primary__corners" style="max-height: 130px"></div>
-      <h6>Date</h6>
-      <p><%= @event.date %></p>
-    </div>
-        <div class="card-primary mt-2">
-      <div class="card-primary__corners"></div>
-      <h6>Attending:</h6>
-      <p> 137</p>
-    </div>
   </div>
 </div>
 
 
 
 
-  <div style="width: 96vw; height: 150px; margin-top: 10px;"
+  <div style="width: 96vw; height: 150px; margin-top: 10px; box-shadow: <%= @box_shadow %>; background: <%= @button_attend %>""
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <div class="button-attend mb-10">
-    <div class=" button-primary__corners "></div>
+  <div class="button-attend mb-10" style="box-shadow: <%= @box_shadow %>; background: <%= @button_attend %>">
     <%= link_to "Back to events", events_path %>
   </div>
 </div>

@@ -1,10 +1,10 @@
-<div class="footer">
+<div class="footer" style="background: <%= @background_header %>">
 
-<i class="fa-solid fa-house"></i>
+<i class="fa-solid fa-house" style="color: <%= @color %>"></i>
 <%= link_to search_path do %>
-<i class="fa-solid fa-magnifying-glass fa-lg list-item-footer"></i>
+<i class="fa-solid fa-magnifying-glass fa-lg list-item-footer" style="color: <%= @color %>"></i>
 <% end %>
 <%= link_to new_event_path do %>
-<i class="fa-solid fa-plus"></i>
+<i class="fa-solid fa-plus" style="color: <%= @color %>"></i>
 <% end %>
 </div>
