@@ -18,5 +18,4 @@ class Event < ApplicationRecord
   validates :intensity, presence: true, inclusion: { in: %w[low medium high extreme] }
   validates :queuing_time, presence: true, inclusion: { in: %w[long average short] }
   validates :door_policy, presence: true, inclusion: { in: %w[strict average easy] }
-  # INTENSITIES = %w[low medium high extreme]
 end
