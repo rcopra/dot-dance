@@ -1,26 +1,25 @@
-
-<div class="glass-card" style="background-image: url('<%= event.poster_image %>')">
-<div class="layer"></div>
-  <div class="glass-card-corners">
+<div class="glass-card" style="background-image: url('<%= event.poster_image %>')" style="box-shadow: <%= @box_shadow %>">
+<div class="layer" style="background: <%= @background %>"></div>
+  <div class="glass-card-corners" style="background: <%= @background_corners %>">
     <div class="card-image">
       <div class="card-container">
         <div class="card-header">
-          <h1><%= event.title %></h1>
+          <h1 style="color: <%= @color %>"><%= event.title %></h1>
         </div>
       </div>
       <div class="card-content">
   <% if event.club %>
-    <p><%= event.club.name %></p>
+    <p style="color: <%= @color %>"><%= event.club.name %></p>
   <% else %>
-    <p><%= event.address %></p>
+    <p style="color: <%= @color %>"><%= event.address %></p>
   <% end %>
-        <p class="card-categories" > intense | long queue | weekender </p>
+        <p class="card-categories" style="color: <%= @color %>" > intense | long queue | weekender </p>
       </div>
       <div class="card-grid"></div>
         <div class="card-footer">
-        <div class="card-footer-item"><i class="fa fa-calendar fa-fw icon-button"></i> <%= event.date %></p></div>
-        <div class="card-footer-item"><i class="fa-regular fa-user fa-fw icon-button"></i> 123</p></div>
-        <div class="card-footer-item"><%= link_to "INFO", event_path(event) %></div>
+        <div class="card-footer-item" style="color: <%= @color %>"><i class="fa fa-calendar fa-fw icon-button"></i> <%= event.date %></p></div>
+        <div class="card-footer-item" style="color: <%= @color %>"><i class="fa-regular fa-user fa-fw icon-button"></i> 123</p></div>
+        <div class="card-footer-item" style="color: <%= @color %>"><%= link_to "INFO", event_path(event) %></div>
         </div>
     </div>
   </div>
