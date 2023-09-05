@@ -18,5 +18,14 @@ class Event < ApplicationRecord
   validates :intensity, presence: true, inclusion: { in: %w[low medium high extreme] }
   validates :queuing_time, presence: true, inclusion: { in: %w[long average short] }
   validates :door_policy, presence: true, inclusion: { in: %w[strict average easy] }
-  # INTENSITIES = %w[low medium high extreme]
+
+  include PgSearch::Model
+  pg_search_scope :search_by_filters,
+    against: [ :title, :genre, :intensity, :queuing_time, :door_policy ],
+    associated_against: {
+      club: [:name]
+    },
+    using: {
+    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
 end
