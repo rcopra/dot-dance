@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
@@ -18,8 +18,11 @@
   <body class="<%= cookies[:theme] %>">
     <%= render "shared/header" %>
     <div class="mt-5">
-      <%= link_to 'light', set_theme_path(theme: 'light') %>
-      <%= link_to 'dark', set_theme_path(theme: 'dark') %>
+      <% if cookies[:theme] == "light" %>
+        <%= link_to <i class="fa-solid fa-moon" style="color: #000000;"></i>, set_theme_path(theme: 'dark') %>
+      <% else %>
+        <%= link_to <i class="fa-regular fa-lightbulb" style="color: #ffffff;"></i>, set_theme_path(theme: 'light') %>
+      <% end %>
     </div>
     <div class="body-test">
       <%= render "shared/flashes" %>
