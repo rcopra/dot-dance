@@ -1,78 +1,84 @@
-<div class="wrapper-form">
-  <%= simple_form_for :search, url: search_path, method: "GET", html: { class: "form index-form" } do |f| %>
-    <div class="search-container">
-      <%= f.input :query,
-              wrapper: false,
-              input_html: {
-                id: "search-bar",
-                value: params.dig(:search, :query)
-              },
-              placeholder: "Find an event",
-              label: false %>
-    </div>
+<div class="body-test">
+  <div class="wrapper-form">
+    <%= simple_form_for :search, url: search_path, method: "GET", html: { class: "form index-form" } do |f| %>
+      <div class="search-container">
+        <%= f.input :query,
+                wrapper: false,
+                input_html: {
+                  id: "search-bar",
+                  value: params.dig(:search, :query)
+                },
+                placeholder: "Find an event",
+                label: false %>
+      </div>
+      <div class="show-grid mt-2">
+        <div class="buttons-container">
+        <h2>Music genre:</h2>
+        <div class="">
+          <%= f.collection_check_boxes :genre,
+                [%w[techno], %w[house], %w[acid], %w[garage], %w[minimal]],
+                :last,
+                :first do |check| %>
+            <div class="tag-item">
+              <%= check.check_box class: "tag-selector",
+                              checked:
+                              check.value %>
+              <%= check.label %>
+            </div>
+          <% end %>
+        </div>
 
-    <div class="buttons-container">
-    <h2>Music genre:</h2>
-      <%= f.collection_check_boxes :genre,
-            [%w[techno], %w[house], %w[acid], %w[garage], %w[minimal]],
-            :last,
-            :first do |check| %>
-        <div class="tag-item">
-           <%= check.check_box class: "tag-selector",
-                          checked:
-                           check.value %>
-          <%= check.label %>
-        </div>
+          <h2>Intensity:</h2>
+          <%= f.collection_check_boxes :intensity,
+                [%w[low], %w[medium], %w[high], %w[extreme]],
+                :last,
+                :first do |check| %>
+            <div class="tag-item">
+              <%= check.check_box class: "tag-selector",
+                              checked:
+                              check.value %>
+              <%= check.label %>
+            </div>
+          <% end %>
+          <h2>Queuing time:</h2>
+          <%= f.collection_check_boxes :queuing_time,
+                [%w[long], %w[average], %w[short]],
+                :last,
+                :first do |check| %>
+            <div class="tag-item">
+              <%= check.check_box class: "tag-selector",
+                              checked:
+                              check.value %>
+              <%= check.label %>
+            </div>
+          <% end %>
+          <h2>Door policy:</h2>
+          <%= f.collection_check_boxes :door_policy,
+                [%w[strict], %w[average], %w[easy]],
+                :last,
+                :first do |check| %>
+            <div class="tag-item">
+              <%= check.check_box class: "tag-selector",
+                              checked:
+                              check.value %>
+              <%= check.label %>
+            </div>
+          <% end %>
+
+        <%= f.submit "Filter", class:"button-filter" %>
+      </div>
+    <% end %>
+  </div>
+
+  <% if params[:search].present? %>
+    <div class="index-grid">
+      <% if @events.any? %>
+        <% @events.each do |event| %>
+          <%= render "events/events_card", event: event %>
+        <% end %>
+      <% else %>
+        <em>Sorry, no events found.</em>
       <% end %>
-      <h2>Intensity:</h2>
-      <%= f.collection_check_boxes :intensity,
-            [%w[low], %w[medium], %w[high], %w[extreme]],
-            :last,
-            :first do |check| %>
-        <div class="tag-item">
-           <%= check.check_box class: "tag-selector",
-                          checked:
-                           check.value %>
-          <%= check.label %>
-        </div>
-      <% end %>
-      <h2>Queuing time:</h2>
-      <%= f.collection_check_boxes :queuing_time,
-            [%w[long], %w[average], %w[short]],
-            :last,
-            :first do |check| %>
-        <div class="tag-item">
-           <%= check.check_box class: "tag-selector",
-                          checked:
-                           check.value %>
-          <%= check.label %>
-        </div>
-      <% end %>
-      <h2>Door policy:</h2>
-      <%= f.collection_check_boxes :door_policy,
-            [%w[strict], %w[average], %w[easy]],
-            :last,
-            :first do |check| %>
-        <div class="tag-item">
-           <%= check.check_box class: "tag-selector",
-                          checked:
-                           check.value %>
-          <%= check.label %>
-        </div>
-      <% end %>
-      <div class="tag-item"><%= f.submit "Filter", id: "filter-button" %></div>
     </div>
   <% end %>
 </div>
-
-<% if params[:search].present? %>
-  <div class="index-grid">
-    <% if @events.any? %>
-      <% @events.each do |event| %>
-        <%= render "events/events_card", event: event %>
-      <% end %>
-    <% else %>
-      <em>Sorry, no events found.</em>
-    <% end %>
-  </div>
-<% end %>
