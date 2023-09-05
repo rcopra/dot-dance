@@ -14,7 +14,7 @@
   <% else %>
     <p><%= event.address %></p>
   <% end %>
-        <p class="card-categories" > intense | long queue | weekender </p>
+        <p class="card-categories" > <%= event.genre %> | <%= event.intensity %> | <%= event.queuing_time %> | <%= event.door_policy %></p>
       </div>
       <div class="card-grid"></div>
         <div class="card-footer">
