@@ -123,7 +123,7 @@ events = [
     According to Frédéric Chopin, “an étude is a musical composition of considerable difficulty, designed to provide practice material for an instrument and its player.” Yet, they are designed to “always please the audience in concert”.The scene for Schrott-Etüde (Scrap Etude): An Etude for Extinction is the parking lot at Olympiastadion.
 
     Based on a composition by experimental composer Katharina Ernst and sound designer Stefan Schneider, this Etude once more melts together musical elements and stunt actions. A mixed cast of stunt women, musicians and performers explore new contexts for representation in dance and the possibilities of a 'technical' theatre in a series of joint operatic rituals and orchestrated crash tests.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNzVmZmZlOGI0ZDA2OTEzZjMwNGRiYjExMTAxYWQ2ZjQ3NTRjM2M4YS5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694004002/aHR0cHM6Ly9pbWFnZXMucmEuY28vNzVmZmZlOGI0ZDA2OTEzZjMwNGRiYjExMTAxYWQ2ZjQ3NTRjM2M4YS5qcGc_r9mvuy.jpg",
     user_id: 2,
     club_id: 2,
     address: "Coubertinplatz, 14053 Berlin",
@@ -142,7 +142,7 @@ events = [
     Its has been a long awaited soiree but finally we get to gather together under the sun and the moon to radiate love and lustful energies with each other once more.
 
     The Luniverse has finally taken us to the finale of the summer, we've arrived at an exotic and erotic planet filled with beautiful flowers blooming and divine beings, this worlds inhabitants are hedonistic and creative creatures inviting us to play... we can't wait.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNGNlYWI5YWQ2ODU5YWQ5ZGQ2MDcyMzdhYzE0NTdiZWJjZDkzM2ZlMy5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694007994/aHR0cHM6Ly9pbWFnZXMucmEuY28vNGNlYWI5YWQ2ODU5YWQ5ZGQ2MDcyMzdhYzE0NTdiZWJjZDkzM2ZlMy5qcGc_wfpxwj.jpg",
     user_id: 2,
     club_id: 6,
     address: "Alt Stralau 70, 10245 Berlin",
@@ -155,7 +155,7 @@ events = [
     title: "BITE Nite 5 Years",
     date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Hardly any label brings 80s influences like EBM, industrial and dark wave into a contemporary techno aesthetic more coherently than the BITE label, co-run by Phase Fatale. For the label's fifth anniversary at Berghain and Panorama Bar, he'll be playing with label acts like Reka, Silent Servant (in a long overdue back2back with Phase Fatale), Unhuman and Vulkanski, resident of Tbilisi's KHIDI club, as well as friends and like-minded acts. Berlin-New York duo Enxin/Onyx, consisting of Tommi Tokyo and Nicky Mao, play dystopian ritual music infused with Mao's ghostly vocals, evoking the broken spirit of Throbbing Gristle. Meanwhile, Sharlese is considered one of the most exciting synth-wave and goth DJs on the American West Coast, serving as resident DJ of Seattle's underground techno collective secondnature and as a member of Black Techno Matters.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vOGRlMGUyMWZhNjA4ZDY0NzQxYzA4MTk3MDM4MGM0MzM2ZTgyNjMxNi5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008017/aHR0cHM6Ly9pbWFnZXMucmEuY28vOGRlMGUyMWZhNjA4ZDY0NzQxYzA4MTk3MDM4MGM0MzM2ZTgyNjMxNi5qcGc_aifozh.jpg",
     user_id: 2,
     club_id: 1,
     address: "70 Am Wriezener Bahnhof, 10243 Berlin",
@@ -168,7 +168,7 @@ events = [
     title: "SÄULE",
     date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "As a member of Madrid's Loopstage collective, Colell explores various, mostly trance-influenced strains of techno that he brings together in his energetic DJ sets. Recently, he launched his own label, Aurora Records. Katie is a newcomer in the contemporary club scene who's been playing a mix of forest trance and urban psy at select events over the past few years. Joining them tonight at Säule is Viennese newskool trance DJ Transki.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNWVjODVmYThjODlkYWQ0MTAwOWY3YjM1OTE2NzQ4ZGE4OWNlYWQ2Ny5wbmc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008044/aHR0cHM6Ly9pbWFnZXMucmEuY28vNWVjODVmYThjODlkYWQ0MTAwOWY3YjM1OTE2NzQ4ZGE4OWNlYWQ2Ny5wbmc_yatzdq.png",
     user_id: 2,
     club_id: 1,
     address: "70 Am Wriezener Bahnhof, 10243 Berlin",
@@ -181,7 +181,7 @@ events = [
     title: "Radiant Records",
     date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Radiant Records is part of the expanded universe of the nomadic party series by Byron Yeates and his collective, Radiant Love. Across more than ten releases, a hedonistic prog-trance-ambient-house world unfolds in different tempos and styles, firmly anchored to the queer dancefloors of our time. French duo Baraka, consisting of singer and poet Hawa Sarita and DJ/producer Cristofeu, represents a hybrid dance-pop that brings together Sarita's catchy vocals with her partner's powerful percussion and acid sounds. In addition to their live gig, tonight's label party at Panorama Bar will feature DJ sets from Byron Yeates, Australian DJ Kia and Finnish electro producer Sansibar.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNDZkNjQyYTE5ZmU0MzkyYzJiMTM3NTQ4MjQ5ODc1NThjYjZkNjhjNy5wbmc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008062/aHR0cHM6Ly9pbWFnZXMucmEuY28vNDZkNjQyYTE5ZmU0MzkyYzJiMTM3NTQ4MjQ5ODc1NThjYjZkNjhjNy5wbmc_uekhgm.png",
     user_id: 2,
     club_id: 1,
     address: "70 Am Wriezener Bahnhof, 10243 Berlin",
@@ -195,7 +195,7 @@ events = [
     date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "ONLINE PRESALE:
     Please note that a presale ticket does not guarantee entry. The club reserves the right to deny entry. Tickets will be automatically refunded in that case. Due to increased security checks at the entrance, there may be an increased waiting time even with a ticket. We ask you to please take this into account and respect it. Thank you.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vZTcwOGYyYmNlZWQ5MzMxZjM5OTVjZjcwYTgzZWQ0MzQxMzJkYmZmNS5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008084/aHR0cHM6Ly9pbWFnZXMucmEuY28vZTcwOGYyYmNlZWQ5MzMxZjM5OTVjZjcwYTgzZWQ0MzQxMzJkYmZmNS5qcGc_zd2j9w.jpg",
     user_id: 2,
     club_id: 7,
     address: "Schnellerstrasse 137, 12439 Berlin",
@@ -208,7 +208,7 @@ events = [
     title: "Grounded Theory [58]",
     date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Grounded Theory have been showcasing heavyweight club music for 14 years. This celebratory birthday bash welcomes resident and cofounder Henning Baer, UK techno master DAX J, NYC's high energy rave specialist KYRUH and Herrensauna resident SPFDJ, for a night of no-holds-barred techno. ",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vMWE1ZDU2MGJkZjhhYmQ4NGU1MjA3NTU0MGZmZTEwZTgwOGU2YzE0OC5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008103/aHR0cHM6Ly9pbWFnZXMucmEuY28vMWE1ZDU2MGJkZjhhYmQ4NGU1MjA3NTU0MGZmZTEwZTgwOGU2YzE0OC5qcGc_jrlsmj.jpg",
     user_id: 2,
     club_id: 7,
     address: "Schnellerstrasse 137, 12439 Berlin",
@@ -221,7 +221,7 @@ events = [
     title: "ANOMALIE x OXYGEN",
     date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Celebrating the new generation of techno DJs like Fatima Hajji, Michael Klein, Koloah, DYEN and Frazi.er, keep your calendar free for this extended 36-hour rave at Anomalie Art Club.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vODA4NTZmODE3OWEzYmViMTI0OTBjYWQ1ZTVmMTcwMDY4MTMwMmQ3ZS5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008118/aHR0cHM6Ly9pbWFnZXMucmEuY28vODA4NTZmODE3OWEzYmViMTI0OTBjYWQ1ZTVmMTcwMDY4MTMwMmQ3ZS5qcGc_sqa4ch.jpg",
     user_id: 2,
     club_id: 8,
     address: "Storkower Str. 123, 10407 Berlin",
@@ -234,7 +234,7 @@ events = [
     title: "RFLXN x Gravity Network with Bailey Ibbs, Detroit In Effect, JKS, Kaiser & Neri J",
     date: Faker::Date.between(from: '2023-09-08', to: '2023-09-29'),
     description: "Gravity, the European cooperation project aiming to develop electronic music culture by creating a foundation for an expanding network of electronic music venues, in which that we are a part of, returns to RSO. The night sees Molekül co-founder, JKS, return to the ROBUS floor and DJ Bus Replacement on the SUMME floor. The cultural night also features Neri J, Detroit in Effect, and Kaiser.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vYTMyODkxYjA4YzA4NjZlNzBhNDhjMDYwZGQzNDBiYWE3Zjg1OTk4ZS5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008146/aHR0cHM6Ly9pbWFnZXMucmEuY28vYTMyODkxYjA4YzA4NjZlNzBhNDhjMDYwZGQzNDBiYWE3Zjg1OTk4ZS5qcGc_vva1qc.jpg",
     user_id: 2,
     club_id: 7,
     address: "Schnellerstrasse 137, 12439 Berlin",
@@ -249,7 +249,7 @@ events = [
     description: "We're glad to announce our second showcase at Else Klub, taking over this amazing venue for another heated summer session on September 2nd. Coming through with a sweet blend of groove, tech-trance and everything in between, and yet again starting off outdoors and extending the dance indoors for the darker dancers.
 
     Join in on another outburst.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNWMyZWViMDU0MzhiMGNiMGQ1MWQ2NThiMTAzMjg4ZTEwOWNhNjZlNS5wbmc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008164/aHR0cHM6Ly9pbWFnZXMucmEuY28vNWMyZWViMDU0MzhiMGNiMGQ1MWQ2NThiMTAzMjg4ZTEwOWNhNjZlNS5wbmc_ippjwg.png",
     user_id: 2,
     club_id: 9,
     address: "An den Treptowers 10, 12435 Berlin",
@@ -271,7 +271,7 @@ events = [
 
     What's the sound system?
     There's a brand new, high-end sound system: Lambda Labs QX3 and a new DJ booth, which is surrounded by the crowd from all sides.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vNTViOTQ4NmI1NGUyNzAwYmNkNzdmM2RjYmU3N2FiODY2NGM5YmI3Yy5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008180/aHR0cHM6Ly9pbWFnZXMucmEuY28vNTViOTQ4NmI1NGUyNzAwYmNkNzdmM2RjYmU3N2FiODY2NGM5YmI3Yy5qcGc_p8nic1.jpg",
     user_id: 2,
     club_id: 9,
     address: "An den Treptowers 10, 12435 Berlin",
@@ -287,7 +287,7 @@ events = [
 
     Any form of racism, discrimination, sexism, homophobia or transphobia won’t be tolerated. Please respect the no photo policy, keep your phone in your pocket and enjoy the moment.
     ",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vODI3ZGZkNDc1YTVmOGY5ODMwNzM4MWJiMjMwYmE0Nzk5ZGZjMTI3Ni5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008200/aHR0cHM6Ly9pbWFnZXMucmEuY28vODI3ZGZkNDc1YTVmOGY5ODMwNzM4MWJiMjMwYmE0Nzk5ZGZjMTI3Ni5qcGc_cb2gec.jpg",
     user_id: 2,
     club_id: 3,
     address: "Markgrafendamm 24c, 10245 Berlin",
@@ -308,7 +308,7 @@ events = [
 
     Respect our no video/photo policy.
     Enjoy the moment, dance and connect with the people around you.",
-    poster_image: "https://imgproxy.ra.co/_/quality:66/w:1500/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vMDI4YjYyM2VhOGIzMjZmZDVkZDY2NWU5ZmYxNzNkZjVlY2Q2N2U5ZC5qcGc=",
+    poster_image: "https://res.cloudinary.com/dqobrmqyi/image/upload/v1694008215/aHR0cHM6Ly9pbWFnZXMucmEuY28vMDI4YjYyM2VhOGIzMjZmZDVkZDY2NWU5ZmYxNzNkZjVlY2Q2N2U5ZC5qcGc_uitndn.jpg",
     user_id: 2,
     club_id: 3,
     address: "Markgrafendamm 24c, 10245 Berlin",
@@ -320,20 +320,14 @@ events = [
 ]
 
 events.each do |event|
-  new_event = Event.create!(
-    title: event[:title],
-    description: event[:description],
-    address: event[:address],
-    user: party_promoter,
-    date: event[:date],
-    club_id: event[:club_id],
-    # status: 2,
-    poster_image: event[:poster_image],
-    genre: event[:genre],
-    intensity: event[:intensity],
-    queuing_time: event[:queuing_time],
-    door_policy: event[:door_policy]
-  )
+  new_event = Event.new(event.except(:poster_image))
+
+  if event[:poster_image].present?
+    new_event.save!
+    new_event.photo.attach(io: URI.open(event[:poster_image]), filename: "poster.png")
+  else
+    new_event.save!
+  end
 
   3.times do
     Lineup.create!(
