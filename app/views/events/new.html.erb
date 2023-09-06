@@ -1,26 +1,30 @@
-<div class="wrapper-form">
+<div class="wrapper-form mt-3">
   <div class="simple-form">
     <div class="simple-form wrapper">
+        <div class="post-primary mb-2">
+      <div class="post-primary__corners"></div>
+        <h1>Create a new event</h1>
+        <p>Creating an event has never been easier. You can effortlessly showcase your event to a dedicated audience of music and dance lovers. .dance is the perfect platform to promote your event and ensure it reaches the right audience.</p>
+    </div>
+    </div>
       <%= simple_form_for(@event) do |f| %>
-        <%= f.input :title %>
+        <%= f.input :title, placeholder: "event title", label: false %>
         <%= f.input :date,
                     as: :string,
-                    input_html: { data: { controller: "datepicker" } } %>
+                    input_html: { data: { controller: "datepicker" } }, label: false %>
           <div data-controller="address" data-action="map-loaded@window->address#initGoogle">
-        <%= f.input :address, html: { autocomplete: 'off' }, input_html: { data: { address_target: 'input' } } %>
+        <%= f.input :address, placeholder: "address", label: false, html: { autocomplete: 'off' }, input_html: { data: { address_target: 'input' } } %>
         <input type="hidden" data-address-target="longitude" />
         <input type="hidden" data-address-target="latitude" />
-          </div>
-          <%= f.input :genre, collection: %w[techno house acid garage minimal]%>
-<%= f.input :description %>
-<%= f.input :intensity, collection: %w[low medium high extreme]%>
-<%= f.input :queuing_time, collection: %w[long average short] %>
-<%= f.input :door_policy, collection: %w[strict average easy] %>
+      </div>
+        <%= f.input :description, placeholder: "your description", label: false %>
+        <%= f.input :genre, collection: ["⏷  select genre", "techno", "house", "acid", "garage", "minimal"], selected: 1, label: false %>
+        <%= f.input :intensity, collection: ["⏷  select intensity", "low", "medium", "high", "extreme"], selected: 1, label: false%>
+        <%= f.input :queuing_time, collection: ["⏷  select queuing time", "long", "average", "short"], selected: 1, label: false%>
+        <%= f.input :door_policy, collection: ["⏷  select door policy", "strict", "average", "easy"], selected: 1, label: false %>
         <%= f.input :photo, as: :file %>
         <%= f.button :submit, class:"button-thread" %>
       <% end %>
     </div>
   </div>
 </div>
-
-  
