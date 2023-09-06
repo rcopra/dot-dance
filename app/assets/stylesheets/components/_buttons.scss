@@ -153,29 +153,3 @@
   top: 0;
   transition: 1s;
 }
-
-.button-primary:after, .button-primary__corners {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.tag-item {
-  background-color: white;
-    width: 93%;
-    height: 50px;
-    padding: 16px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    color: black;
-    margin: 12px;
-}
-
-.tag-item-clicked {
-  background-color: purple;
-  width: 93%;
-  height: 50px;
-  padding: 16px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}

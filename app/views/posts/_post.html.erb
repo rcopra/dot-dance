@@ -1,11 +1,19 @@
 <div id="post-<%= post.id %>">
-  <small>
-    <p> <strong> <%= post.user.username %> </strong></p>
-    <p> // <%= post.title %> </p>
-    <p> Topic: <%= post.topic %> </p>
-    <i><%= post.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-  </small>
-  <% if !post.comments.empty? %>
-    <p> <%= link_to "#{post.comments.first.content}", event_post_path(post.event, post)%> </p>
-    <% end %>
+  <div class="post-container">
+    <div class="post-username">
+      <p> <strong> <%= post.user.username %> </strong></p>
+    </div>
+    <div class="post-tags">
+      <p><%= post.title %> || <%= post.topic %> </p>
+    </div>
+    <div class="post-content">
+      <% if !post.comments.empty? %>
+        <p> <%= post.comments.first.content%> </p>
+      <% end %>
+    </div>
+    <div class="post-footer">
+      <p><%= rand(1..30) %> comments</p>
+      <%= link_to "reply", event_post_path(post.event, post), button:"button-reply" %>
+    </div>
+  </div>
 </div>
