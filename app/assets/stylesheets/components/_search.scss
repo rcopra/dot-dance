@@ -1,0 +1,71 @@
+.tag-item {
+  display: inline-block;
+
+}
+
+.tag-selector {
+  position: absolute;
+  transform: scale(0);
+  z-index: 14;
+}
+
+.tag-selector + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.7rem;
+  background-color: transparent;
+  color: #D5F34C;
+  border: 2px solid #D5F34C;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  z-index: 12;
+}
+
+.tag-selector:checked + label {
+  background-color: #D5F34C;
+  color: black;
+  z-index: 12;
+}
+
+.card-search {
+  color: #fff;
+  display: inline-block;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  border: 0.1px solid (255, 255, 255, 0.2);
+  width: 100%;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin: 5px 0px;
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  h1, h6 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px 0px;
+  }
+
+  a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Anonymous pro', monospace !important;
+      text-transform: uppercase;
+      justify-content: center;
+      display: inline-block;
+      background-color: #D5F34C;
+
+      &:hover, &:focus {
+        color:rgba(31, 38, 135, 0.37);
+      }
+  }
+}
