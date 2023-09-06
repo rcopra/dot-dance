@@ -1,9 +1,10 @@
-<div class="container post"
+<div
     data-controller="post-subscription"
-    data-post-subscription-post-id-value="<%= @post.id %>"
->
-  <h1>#<%= @post.title %></h1>
-  <i><%= @post.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+    data-post-subscription-post-id-value="<%= @post.id %>">
+  <div class="card-search">
+ <h1> Original post </h1>
+  <h1><%= @post.title %></h1>
+
 
   <div class="comments" data-post-subscription-target="comments">
     <% @post.comments.each do |comment| %>
@@ -11,8 +12,9 @@
     <% end %>
   </div>
 
+<h1>Join the discusssion</h1>
 <%= simple_form_for [@post, @comment],
-  html: { data: { action: "turbo:submit-end->post-subscription#resetForm" }, class: "d-flex" } do |f|
+  html: { data: { action: "turbo:submit-end->post-subscription#resetForm" }, } do |f|
 %>
   <%= f.input :content,
     label: false,
@@ -22,5 +24,6 @@
   %>
   <%= f.submit "send", class: "button-filter" %>
 <% end %>
-
+ </div>
+  </div>
 </div>

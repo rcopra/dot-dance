@@ -1,7 +1,13 @@
+
+
+
 <div id="comment-<%= comment.id %>">
-  <small>
-    <strong><%= comment.user.username %></strong>
-    <i><%= comment.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-  </small>
-  <p><%= comment.content %></p>
+ <div class="card-search">
+      <p class="text_overflow"
+    style="font-size: 18px;"><%= comment.content %> </p>
+<hr>
+   <p style="color:#white; justify-content:space-between">Comment created by <%= comment.user.username %> on <i><%= comment.created_at.strftime("%a %b %e at %l:%M %p") %></i> </p>
+
+    </div>
+  </div>
 </div>

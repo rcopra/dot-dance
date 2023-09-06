@@ -34,7 +34,6 @@ a {
     color: #D5F34C;
   }
 
-
   .card-content.light {
     color: white  ;
   }
@@ -43,13 +42,11 @@ a {
 @media (prefers-color-scheme: light) {
   body {
       background: white;
-      color:  var(--light-bg-color-card);
+      color:  black;
   }
-
 
   body.dark {
     background: var(--dark-bg-color);
     color: var(--dark-text-color);
   }
-
 }
