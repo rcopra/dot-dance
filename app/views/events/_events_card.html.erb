@@ -1,4 +1,4 @@
-<div class="glass-card" style="background-image: url('<%= event.poster_image %>')" style="box-shadow: <%= @box_shadow %>">
+<div class="glass-card" style="background-image: url('<%= cl_image_path event.photo.key %>')" style="box-shadow: <%= @box_shadow %>">
 <div class="layer" style="background: <%= @background %>"></div>
   <div class="glass-card-corners" style="background: <%= @background_corners %>">
     <div class="card-image">
