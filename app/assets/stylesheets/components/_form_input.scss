@@ -18,15 +18,6 @@
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
   }
-
-
-
-}
-
-
-text.optional {
-  color: red;
-  background-color: red;
 }
 
 .form-control.file.optional {
@@ -102,5 +93,31 @@ text.optional {
 }
 
 #post_comments_attributes_0_content::placeholder {
+  color: white
+}
+
+#post_topic::placeholder {
+  color: white;
+}
+
+#post_title::placeholder {
+  color: white;
+}
+
+#event_title::placeholder {
+  color: white
+}
+
+
+#event_address::placeholder {
+  color: white
+}
+
+
+#event_description::placeholder {
+  color: white
+}
+
+#event_title::placeholder {
   color: white
 }
