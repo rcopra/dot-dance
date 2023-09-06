@@ -1,6 +1,6 @@
-<div class="body-test">
+<div class="body-test-search">
   <div class="wrapper-form">
-    <%= simple_form_for :search, url: search_path, method: "GET", html: { class: "form index-form" } do |f| %>
+    <%= simple_form_for :search, url: search_path, id:"search-form", method: "GET", html: { class: "form index-form" } do |f| %>
       <div class="search-container">
         <%= f.input :query,
                 wrapper: false,
@@ -11,22 +11,22 @@
                 placeholder: "Find an event",
                 label: false %>
       </div>
-        <div class="card-search">
-        <h6>Music genre</h2>
+      <div class="card-search">
+        <h6>Music genre</h6>
         <div class="">
           <%= f.collection_check_boxes :genre,
                 [%w[techno], %w[house], %w[acid], %w[garage], %w[minimal]],
                 :last,
                 :first do |check| %>
-            <div class="tag-item">
-              <%= check.check_box class: "tag-selector",
-                              checked:
-                              check.value %>
-              <%= check.label %>
-            </div>
+          <div class="tag-item">
+            <%= check.check_box class: "tag-selector",
+                            checked:
+                            check.value %>
+            <%= check.label %>
+          </div>
           <% end %>
         </div>
-          <h6>Intensity</h2>
+          <h6>Intensity</h6>
           <%= f.collection_check_boxes :intensity,
                 [%w[low], %w[medium], %w[high], %w[extreme]],
                 :last,
@@ -39,7 +39,7 @@
             </div>
           <% end %>
 
-          <h6>Queuing time</h2>
+          <h6>Queuing time</h6>
           <%= f.collection_check_boxes :queuing_time,
                 [%w[long], %w[average], %w[short]],
                 :last,
@@ -51,7 +51,7 @@
               <%= check.label %>
             </div>
           <% end %>
-          <h6>Door policy</h2>
+          <h6>Door policy</h6>
           <%= f.collection_check_boxes :door_policy,
                 [%w[strict], %w[average], %w[easy]],
                 :last,
@@ -66,7 +66,7 @@
         </div>
         </div>
 
-        <%= f.submit "Filter", class:"button-filter" %>
+        <%= f.submit "Filter", class:"button-filter", form:"search-form" %>
       </div>
     <% end %>
   </div>
@@ -83,7 +83,3 @@
     </div>
   <% end %>
 </div>
-
-
-
-
