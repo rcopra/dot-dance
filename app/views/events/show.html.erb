@@ -6,7 +6,7 @@
 
 <div class="show-grid mt-2">
   <div>
-    <img class="img-show" style="border: <%= @img_show %>" src="<%= cl_image_path event.photo.key %>">
+    <img class="img-show" style="border: <%= @img_show %>" src="<%= cl_image_path @event.photo.key %>">
       <div class="card-show mt-2" style="box-shadow: <%= @box_shadow %>">
         <div class="card-primary__corners" style="background: <%= @corner_card %>"></div>
         <p style="color: <%= @color %>"><%= @event.description %></p>
