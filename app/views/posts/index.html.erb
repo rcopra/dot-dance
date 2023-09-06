@@ -1,38 +1,35 @@
-<div class="body-test">
+
 
   <div data-controller="posts-channel-subscription"
     data-posts-channel-subscription-event-id-value="<%=@event.id%>">
 
-    <div class="card-primary mb-2">
-      <div class="card-primary__corners"></div>
-        <h1>Threads</h1>
-        <h6>#<%= @event.title%></h6>
+    <div class="post-primary mb-2">
+      <div class="post-primary__corners"></div>
+        <h1>Connect with others for <%= @event.title%></h1>
+        <p>get ready to explore Berlin's electrifying nightlife like never before. Join the .dance community and start chatting with fellow music enthusiasts who are as passionate about the beat as you are. Let the rhythm guide you, and let the .dance experience begin!</p>
     </div>
 
     <%= simple_form_for(@post, url: event_posts_path) do |f| %>
       <%= f.error_notification %>
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-        <div class="card-primary">
-        <div class="card-primary__corners"></div>
+        <div class="post-primary">
+        <div class="post-primary__corners"></div>
           <%= f.input :title %>
           <%= f.input :topic, collection: %w[line vibe general social], select_html: {class: "dropdown-no-empty"} %>
           <%= f.simple_fields_for :comments do |m| %>
           <%= m.input :content, placeholder: "Your message", label: false %>
           <% end %>
         </div>
-        <%= f.button :submit, class: "button-primary-form"%>
+        <%= f.button :submit, class: "button-thread"%>
     <% end %>
 
-    <div class="container posts"
+    <div
       data-controller="posts-channel-subscription"
-      data-posts-channel-subscription-event-id-value="<%=@event.id%>"
-    >
-
-    <div class="container">
-      <div class="index-grid" data-posts-channel-subscription-target="posts">
+      data-posts-channel-subscription-event-id-value="<%=@event.id%>">
+    <div >
+      <div data-posts-channel-subscription-target="posts">
         <% if @posts.any? %>
           <% @posts.each do |post| %>
-            <div class="my-5">
                 <%= render "posts/post", post: post %>
             </div>
           <% end %>
@@ -41,5 +38,3 @@
         <% end %>
       </div>
     </div>
-  </div>
-</div>

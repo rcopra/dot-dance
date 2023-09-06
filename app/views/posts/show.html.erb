@@ -3,6 +3,7 @@
     data-post-subscription-post-id-value="<%= @post.id %>"
 >
   <h1>#<%= @post.title %></h1>
+  <i><%= @post.created_at.strftime("%a %b %e at %l:%M %p") %></i>
 
   <div class="comments" data-post-subscription-target="comments">
     <% @post.comments.each do |comment| %>
@@ -19,7 +20,7 @@
     wrapper_html: {class: "flex-grow-1 mb-0", id: "post_comment"},
     input_html: {class: "h-100"}
   %>
-  <%= f.submit "send", class: "button-send" %>
+  <%= f.submit "send", class: "button-filter" %>
 <% end %>
 
 </div>

@@ -2,17 +2,21 @@
   <div class="card-primary">
     <div class="card-primary__corners">
       <div id="user_events">
-        <ul>
-          <h1>Agenda</h1>
+
+          <h1 style="padding: 10px">Agenda</h1>
+              <hr>
           <% @user.attendees.each do |attendee| %>
-            <p>
-              <%= attendee.event.title %>,
-              <%= attendee.event.date %>,
+            <p style="padding: 10px">
+              <%= attendee.event.title %>
+              <%= attendee.event.date %>
               <%= attendee.event.address %>,
             </p>
-            <%= link_to "TO THREADS", event_posts_path(attendee.event) %>
+  <div class="button-dashboard" style="box-shadow: <%= @box_shadow %>; background: <%= @button_attend %>; padding: 10px">
+    <%= link_to "TO THREADS", event_posts_path(attendee.event) %>
+
+  </div>
+      <hr>
           <% end %>
-        </ul>
       </div>
       </div>
     </div>
@@ -49,32 +53,33 @@
 </div>
 </div>
 
-<div class="dashboard-grid__recommendations mt-2">
-   <div class="card-primary mb-2">
-      <div class="card-primary__corners"></div>
-      <div id="user_events">
-      <%event_one = Event.find_by_id(rand(1..4))  %>
-        <h6> <%= event_one.title %></h6>
-          <p><%= event_one.club.name %></p>
-          <p><%= event_one.date %></p>
-      </div>
-    </div>
-      <div class="card-primary mb-2">
+<h1 class="h1" style="padding-top: 3vh">Recommended events</h1>
+  <div class="dashboard-grid__recommendations mt-2">
+    <div class="card-primary mb-2">
         <div class="card-primary__corners"></div>
-          <div id="user_events">
-            <%event_two = Event.find_by_id(rand(4..8))  %>
-            <h6> <%= event_two.title %></h6>
-            <p><%= event_two.club.name %></p>
-            <p><%= event_two.date %></p>
-          </div>
-      </div>
-      <div class="card-primary mb-2">
-        <div class="card-primary__corners"></div>
-          <div id="user_events">
-            <%event_three = Event.find_by_id(rand(8..13))  %>
-          <h6> <%= event_three.title %></h6>
-          <p><%= event_three.club.name %></p>
-          <p><%= event_three.date %></p>
-          </div>
+        <div id="user_events">
+        <%event_one = Event.find_by_id(rand(1..4))  %>
+          <h6> <%= event_one.title %></h6>
+            <p><%= event_one.club.name %></p>
+            <p><%= event_one.date %></p>
         </div>
       </div>
+        <div class="card-primary mb-2">
+          <div class="card-primary__corners"></div>
+            <div id="user_events">
+              <%event_two = Event.find_by_id(rand(4..8))  %>
+              <h6> <%= event_two.title %></h6>
+              <p><%= event_two.club.name %></p>
+              <p><%= event_two.date %></p>
+            </div>
+        </div>
+        <div class="card-primary mb-2">
+          <div class="card-primary__corners"></div>
+            <div id="user_events">
+              <%event_three = Event.find_by_id(rand(8..13))  %>
+            <h6> <%= event_three.title %></h6>
+            <p><%= event_three.club.name %></p>
+            <p><%= event_three.date %></p>
+            </div>
+          </div>
+        </div>

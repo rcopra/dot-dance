@@ -4,9 +4,15 @@
   outline: none;
   padding: 10px;
   position: relative;
-  border: 0.1px solid (255, 255, 255, 0.2);
   width: 100%;
   border: 0.5px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur( .5px );
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  position: relative;
+
 
   p {
     font-family: 'Poppins', sans-serif;
@@ -21,20 +27,20 @@
     font-weight: bolder;
   }
 
-  a {
-      color: white;
-      text-decoration: none;
-      font-family: 'Anonymous pro', monospace !important;
-      text-transform: uppercase;
-      justify-content: center;
-      display: inline-block;
-      background-color: #D5F34C;
+  // a {
+  //     color: white;
+  //     text-decoration: none;
+  //     font-family: 'Anonymous pro', monospace !important;
+  //     text-transform: uppercase;
+  //     justify-content: center;
+  //     display: inline-block;
+  //     background-color: #D5F34C;
 
-      &:hover, &:focus {
-        color:rgba(31, 38, 135, 0.37);
-      }
+  //     &:hover, &:focus {
+  //       color:rgba(31, 38, 135, 0.37);
+  //     }
   }
-}
+
 
 
 .card-primary__corners {

@@ -1,5 +1,9 @@
-<div class="body-test">
-  <div class="wrapper-form">
+<div class="wrapper-form">
+<div class="card-search">
+  <h1> Find your next event</h1>
+  <p>Discover the perfect event in Berlin with our ".dance" search feature. Filter by date, genre, location, or theme to find the nightlife experience that suits your style. </p>
+</div>
+</div>
     <%= simple_form_for :search, url: search_path, method: "GET", html: { class: "form index-form" } do |f| %>
       <div class="search-container">
         <%= f.input :query,
@@ -83,7 +87,3 @@
     </div>
   <% end %>
 </div>
-
-
-
-
