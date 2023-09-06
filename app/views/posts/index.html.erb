@@ -15,7 +15,7 @@
         <div class="post-primary">
         <div class="post-primary__corners"></div>
           <%= f.input :title, placeholder: "post title", label: false  %>
-          <%= f.input :topic, placeholder: "select topic", label: false, collection: %w[select queuing vibe general social], select_html: {class: "dropdown-no-empty"} %>
+          <%= f.input :topic, placeholder: "select topic", label: false, collection: ["select topic", "queuing", "vibe", "general", "social"], select_html: {class: "dropdown-no-empty"}, selected: 1 %>
           <%= f.simple_fields_for :comments do |m| %>
           <%= m.input :content, placeholder: "your message", label: false %>
           <% end %>
