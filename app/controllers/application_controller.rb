@@ -105,4 +105,8 @@ class ApplicationController < ActionController::Base
   def button_attend
     @button_attend = cookies[:theme] == "light" ? "black" : "transparent"
   end
+
+  def default_url_options
+      { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end

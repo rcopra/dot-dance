@@ -1,0 +1,6 @@
+# config/meta.yml
+meta_product_name: ".dance"
+meta_title: ".dance - Your Ultimate Berlin Event Companion"
+meta_description: "Discover and connect with Berlin's hottest nightlife events on .dance. Chat with fellow partygoers and create your own event listings."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@example_dance" # Replace with your actual Twitter account
