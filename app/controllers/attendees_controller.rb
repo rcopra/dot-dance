@@ -19,9 +19,9 @@ class AttendeesController < ApplicationController
     @attendee = @event.attendees.find_by(user: current_user)
     if @attendee
       @attendee.destroy
-      redirect_to @event, notice: "You are no longer attending this event."
+      redirect_to event_path(@event), notice: "You are no longer attending this event."
     else
-      redirect_to @event, alert: "You are not attending this event."
+      redirect_to event_path(@event), alert: "You are not attending this event."
     end
   end
 end
