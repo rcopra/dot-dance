@@ -1,35 +1,48 @@
 .post-primary {
-  color: black;
+  color: #fff;
   display: inline-block;
   outline: none;
   padding: 10px;
   position: relative;
-  border: 0.1px solid (255, 255, 255, 0.2);
   width: 100%;
   border: 0.5px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  background: white;
-  opacity: 0.8;
-  font-family: 'Poppins', sans-serif;
-  font-weight: lighter;
-  
-  h6 {
+  backdrop-filter: blur( .5px );
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  position: relative;
+
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  h1, h6 {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Anonymous pro', monospace !important;
+      text-transform: uppercase;
+      justify-content: center;
+      display: inline-block;
+      background-color: #D5F34C;
+
+      &:hover, &:focus {
+        color:rgba(31, 38, 135, 0.37);
+      }
   }
 }
-a {
-  color: white;
-  text-decoration: none;
-  font-family: 'Anonymous pro', monospace;
-  text-transform: uppercase;
-  text-align: center;
-  justify-content: center;
-  display: inline-block;
-  &:hover, &:focus {
-    color: #D5F34C;
-  }
-}
+
+
 .post-primary__corners {
   background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
   linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
@@ -40,8 +53,10 @@ a {
   linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
   linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
   background-repeat: no-repeat;
-  background-size: 3px 3px
+  background-size: 5px 5px
 }
+
+
 .post-primary:after, .post-primary__corners {
   bottom: 0;
   left: 0;
@@ -49,6 +64,7 @@ a {
   right: 0;
   top: 0;
 }
+
 
 #post_comment {
   margin: 0 !important;
@@ -62,4 +78,111 @@ a {
   border: 0.5px solid rgba(255, 255, 255, 0.3);
   border-radius: 2px;
   width: 80px;
+}
+
+
+.text_overflow {
+  display: -webkit-box;
+  max-width: 80vh;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+
+.threads-card {
+  color: #D5F34C;
+  text-transform: uppercase;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( .5px );
+  align-items: center;
+  justify-content: center;
+  min-height: 315px;
+  height: auto;
+  margin-bottom: 25px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  position: relative;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+
+  h1 {
+      color: #d5f34c;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+    }
+  }
+
+
+
+.threads-card-corners {
+  background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
+  linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
+  linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
+  linear-gradient(180deg,#fff 1px,transparent 0) 100% 0,
+  linear-gradient(270deg,#fff 1px,transparent 0) 100% 100%,
+  linear-gradient(0deg,#fff 1px,transparent 0) 100% 100%,
+  linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
+  linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 1s;
+  width: 100%;
+  min-height: 315px;
+  height: auto;
+  transition: 1s;
+
+  &:hover {
+    background-size: 100vh 100vw
+  }
+}
+
+
+.threads-card-content {
+    color: #fff;
+    padding: 0vh 2vh;
+    align-items: left;
+    font-family: 'Anonymous pro', monospace;
+    font-size: 18px;
+}
+
+.button-thread {
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  margin: 1vh 0vh;
+  box-shadow: 0 8px 32px 0rgba( 31, 38, 135, 0.37 ) ;
+  border: 2px solid #D5F34C;
+  display: flex;
+  align-items: center;
+  color: #D5F34C;
+  text-transform: uppercase;
+  font-family: 'Anonymous pro', monospace !important;
+  display: flex;
+  text-align: center;
+  border-radius: 0px;
+
+  a {
+    color: #D5F34C;
+    text-decoration: none;
+    font-family: 'Anonymous pro', monospace !important;
+    text-transform: uppercase;
+    z-index: 10;
+    // justify-content: center;
+    // display: inline-block;
+    font-weight: 300 !important;
+    font-size: 22px;
+  }
 }

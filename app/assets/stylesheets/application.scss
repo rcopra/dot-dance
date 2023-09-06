@@ -12,12 +12,16 @@
   --dark-text-color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
       color: var(--dark-text-color);
       background: linear-gradient(270deg, rgba(31,0,71,1) 0%, rgba(23,0,64,1) 32%, rgba(0,0,0,1) 100%);
       background-repeat: none;
-      padding: 5vh 1vw 5vh 1vw;
+      padding: 6vh 2vw 6vh 2vw;
       min-height: 100vh;
   }
 
@@ -30,6 +34,8 @@
     color: #D5F34C;
   }
 
+
+
   .card-content.light {
     color: blue;
   }
@@ -37,8 +43,8 @@
 
 @media (prefers-color-scheme: light) {
   body {
-    background: white;
-    color:  var(--light-bg-color-card);
+      background: white;
+      color:  var(--light-bg-color-card);
   }
 
 

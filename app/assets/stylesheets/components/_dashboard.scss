@@ -30,3 +30,39 @@
   right: 0;
   top: 0;
 }
+
+.button-dashboard {
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  justify-content: center;
+  width: 80%;
+  margin: 0px 10px 0px 10px;
+  box-shadow: 0 8px 32px 0rgba( 31, 38, 135, 0.37 ) ;
+  border: 2px solid #D5F34C;
+  display: flex;
+  align-items: center;
+  color: #D5F34C;
+  text-transform: uppercase;
+  font-family: 'Anonymous pro', monospace !important;
+  display: flex;
+  text-align: center;
+  border-radius: 0px;
+
+  a {
+    color: #D5F34C;
+    text-decoration: none;
+    font-family: 'Anonymous pro', monospace !important;
+    text-transform: uppercase;
+    z-index: 10;
+    // justify-content: center;
+    // display: inline-block;
+    font-weight: 300 !important;
+    font-size: 22px;
+  }
+}
+.h1 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}

@@ -1,11 +1,22 @@
-<div id="post-<%= post.id %>">
-  <small>
-    <p> <strong> <%= post.user.username %> </strong></p>
-    <p> // <%= post.title %> </p>
-    <p> Topic: <%= post.topic %> </p>
-    <i><%= post.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-  </small>
-  <% if !post.comments.empty? %>
-    <p> <%= link_to "#{post.comments.first.content}", event_post_path(post.event, post)%> </p>
+
+
+<div class="threads-card">
+  <div class="threads-card-corners"></div>
+    <div class="card-container">
+      <div class="card-header">
+        <h1 style="color: <%= @color %>"><%= post.title %></h1>
+        <p><%= post.user.username %> </p>
+      </div>
+    </div>
+    <div class="threads-card-content">
+        <% if !post.comments.empty? %>
+      <p class="text_overflow"> <%= post.comments.first.content%> </p>
     <% end %>
+    </div>
+    <div class="card-grid"></div>
+      <div class="card-footer">
+      <div class="card-footer-item" style="color: <%= @color %>"> <%= rand(1..30) %> comments</div>
+      <div class="card-footer-item" style="color: <%= @color %>">    <i class="fa-regular fa-paper-plane fa-lg"></i></div>
+    </div>
+  </div>
 </div>

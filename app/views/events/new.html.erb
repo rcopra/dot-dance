@@ -17,8 +17,10 @@
 <%= f.input :queuing_time, collection: %w[long average short] %>
 <%= f.input :door_policy, collection: %w[strict average easy] %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit %>
+        <%= f.button :submit, class:"button-thread" %>
       <% end %>
     </div>
   </div>
 </div>
+
+  
