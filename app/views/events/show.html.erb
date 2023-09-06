@@ -45,7 +45,7 @@
       <div class="attending-button" data-controller="change-button" data-action="click->change-button#fire">
           <% if current_user %>
           <% if current_user.attending?(@event) %>
-            <%= link_to "No longer attending", event_attendee_path(@event, current_user.attendee_for_event(@event)), data: {turbo_method: :delete} %>
+            <%= link_to "Cancel", event_attendee_path(@event, current_user.attendee_for_event(@event)), data: {turbo_method: :delete} %>
 
           <% else %>
             <%= link_to "Attend", event_attendees_path(@event), data: {
