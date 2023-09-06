@@ -1,4 +1,36 @@
-.card-primary {
+.tag-item {
+  display: inline-block;
+
+}
+
+.tag-selector {
+  position: absolute;
+  transform: scale(0);
+  z-index: 14;
+}
+
+.tag-selector + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.7rem;
+  background-color: transparent;
+  color: #D5F34C;
+  border: 2px solid #D5F34C;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  z-index: 12;
+}
+
+.tag-selector:checked + label {
+  background-color: #D5F34C;
+  color: black;
+  z-index: 12;
+}
+
+.card-search {
   color: #fff;
   display: inline-block;
   outline: none;
@@ -7,6 +39,7 @@
   border: 0.1px solid (255, 255, 255, 0.2);
   width: 100%;
   border: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin: 5px 0px;
 
   p {
     font-family: 'Poppins', sans-serif;
@@ -19,6 +52,7 @@
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bolder;
+    padding: 5px 0px;
   }
 
   a {
@@ -34,27 +68,4 @@
         color:rgba(31, 38, 135, 0.37);
       }
   }
-}
-
-
-.card-primary__corners {
-  background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
-  linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
-  linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
-  linear-gradient(180deg,#fff 1px,transparent 0) 100% 0,
-  linear-gradient(270deg,#fff 1px,transparent 0) 100% 100%,
-  linear-gradient(0deg,#fff 1px,transparent 0) 100% 100%,
-  linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
-  linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
-  background-repeat: no-repeat;
-  background-size: 5px 5px
-}
-
-
-.card-primary:after, .card-primary__corners {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }

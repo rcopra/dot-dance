@@ -11,9 +11,8 @@
                 placeholder: "Find an event",
                 label: false %>
       </div>
-      <div class="show-grid mt-2">
-        <div class="buttons-container">
-        <h2>Music genre:</h2>
+        <div class="card-search">
+        <h6>Music genre</h2>
         <div class="">
           <%= f.collection_check_boxes :genre,
                 [%w[techno], %w[house], %w[acid], %w[garage], %w[minimal]],
@@ -27,8 +26,7 @@
             </div>
           <% end %>
         </div>
-
-          <h2>Intensity:</h2>
+          <h6>Intensity</h2>
           <%= f.collection_check_boxes :intensity,
                 [%w[low], %w[medium], %w[high], %w[extreme]],
                 :last,
@@ -40,7 +38,8 @@
               <%= check.label %>
             </div>
           <% end %>
-          <h2>Queuing time:</h2>
+
+          <h6>Queuing time</h2>
           <%= f.collection_check_boxes :queuing_time,
                 [%w[long], %w[average], %w[short]],
                 :last,
@@ -52,7 +51,7 @@
               <%= check.label %>
             </div>
           <% end %>
-          <h2>Door policy:</h2>
+          <h6>Door policy</h2>
           <%= f.collection_check_boxes :door_policy,
                 [%w[strict], %w[average], %w[easy]],
                 :last,
@@ -64,6 +63,8 @@
               <%= check.label %>
             </div>
           <% end %>
+        </div>
+        </div>
 
         <%= f.submit "Filter", class:"button-filter" %>
       </div>
@@ -82,3 +83,7 @@
     </div>
   <% end %>
 </div>
+
+
+
+

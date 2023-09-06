@@ -10,7 +10,6 @@
   --light-text-color: black;
   --dark-bg-color: black;
   --dark-text-color: white;
-  // --light-bg-color-card: red;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,10 +26,9 @@
     color: black;
   }
 
-
-  // .card-content.adaptive {
-  //  color: red;
-  // }
+  .link:hover {
+    color: #D5F34C;
+  }
 
   .card-content.light {
     color: blue;
