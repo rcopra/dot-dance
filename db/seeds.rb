@@ -12,7 +12,9 @@ party_goer = User.create(email: 'person@example.com', password: 'password', user
 party_promoter = User.create(email: 'promoter@example.com', password: 'password', username: 'promoter')
 club_owner = User.create(email: 'club@example.com', password: 'password', username: 'owner')
 rose_buck = User.create(email: 'rosebuck@example.com', password: 'password', username: 'rosebuck')
-rose_buck = User.create(email: 'samsonmay@example.com', password: 'password', username: 'samson_may')
+samson_may = User.create(email: 'samsonmay@example.com', password: 'password', username: 'samson_may')
+thehustler = User.create(email: 'thehustler@example.com', password: 'password', username: 'thehustler')
+luistorres = User.create(email: 'luistorres@example.com', password: 'password', username: 'luistorres')
 
 # Create artists
 
