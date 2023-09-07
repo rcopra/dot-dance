@@ -48,7 +48,7 @@
             <%= link_to "Cancel", event_attendee_path(@event, current_user.attendee_for_event(@event)), data: {turbo_method: :delete} %>
 
           <% else %>
-          <% event_date_formatted = @event.date.strftime("%A, %B %d") %>
+          <% event_date_formatted = @event.date.strftime(" %b %e %Y") %>
             <%= link_to "Attend", event_attendees_path(@event), data: {
               turbo_method: :post,
               controller: "alert",

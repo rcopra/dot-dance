@@ -23,9 +23,11 @@
   <body class="<%= cookies[:theme] %>">
     <div class="header-show" style="background: <%= @background_header %>">
       <% if cookies[:theme] == "light" %>
-      <%= link_to 'dark', set_theme_path(theme: 'dark'), style:"color: #{@color}" %>
+      <%= link_to set_theme_path(theme: 'dark') do %><i class="fa-solid fa-moon"  style="text-align: left; color: <%= @color %>"></i>
+      <% end %>
       <% else %>
-        <%= link_to 'light', set_theme_path(theme: 'light'), style:"color: #{@color}" %>
+      <%= link_to set_theme_path(theme: 'light') do %><i class="fa-regular fa-lightbulb"  style="text-align: left; color: <%= @color %>"></i>
+      <% end %>
       <% end %>
     <h1 style= "flex: 1;text-align: center; margin-top: 7px; color: <%= @color %>"><%=link_to ".DANCE", events_path, style:"color: #{@color}"%></h1>
   <%= link_to dashboard_path do %><i class="fa-regular fa-user"  style="text-align: left; color: <%= @color %>"></i>

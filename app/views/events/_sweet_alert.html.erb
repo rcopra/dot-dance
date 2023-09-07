@@ -1,8 +1,9 @@
+<%= raise %>
  <%= link_to "Attend", event_attendees_path(event), data: {
               turbo_method: :post,
               controller: "alert",
               alert_title_value: "See you at #{event.title}!",
-              alert_html_value: "#{event.date}",
+              alert_html_value: "#{event.date.strftime("%b %e %Y")}",
               alert_confirm_button_text_value: "<a href='#{event_posts_path(event)}'>CHAT</a>",
               alert_show_cancel_button_value: true,
               alert_cancel_button_text_value: "<a href='#{events_path}'>see other options</a>",
