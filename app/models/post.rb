@@ -4,5 +4,5 @@ class Post < ApplicationRecord
   has_many :comments
   accepts_nested_attributes_for :comments
   validates :title, presence: true
-  validates :topic, presence: true, inclusion: { in: %w[queuing, vibe, general, social] }
+  validates :topic, presence: true, inclusion: { in: %w[queuing vibe general social] }
 end
