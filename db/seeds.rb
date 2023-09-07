@@ -8,9 +8,11 @@ User.destroy_all
 
 # Create users
 
-party_goer = User.create(email: 'person@example.com', password: 'password', username: 'person')
+party_goer = User.create(email: 'person@example.com', password: 'password', username: 'sven')
 party_promoter = User.create(email: 'promoter@example.com', password: 'password', username: 'promoter')
 club_owner = User.create(email: 'club@example.com', password: 'password', username: 'owner')
+rose_buck = User.create(email: 'rosebuck@example.com', password: 'password', username: 'rosebuck')
+rose_buck = User.create(email: 'samsonmay@example.com', password: 'password', username: 'samson_may')
 
 # Create artists
 
