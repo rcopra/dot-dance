@@ -3,10 +3,10 @@
   <div class="comments-card">
     <div class="comments-container">
       <div class="comments-card-content">
-        <p style="font-size: 18px; padding 2hv" ><%= comment.content %> </p>
+        <p style="font-size: 18px;" ><%= comment.content %> </p>
     </div>
     <div>
-      <p style="color:#white; justify-content:space-between; font-size: 12px; font-family: font-family: 'Anonymous pro', monospace;">Comment created by <%= comment.user.username %> on <i><%= comment.created_at.strftime("%a %b %e at %l:%M %p") %></i> </p></div>
+      <p style="color:#white; justify-content:space-between; font-size: 12px; font-family: font-family: 'Anonymous pro', monospace;">Comment created by <%= comment.user.username %> on <%= comment.created_at.strftime("%a %b %e at %l:%M %p") %> </p></div>
     </div>
   </div>
 </div>

@@ -16,6 +16,7 @@
   // border: 0.5px solid rgba(255, 255, 255, 0.3);
   border-bottom:  1px solid white;
   font-size: 12px ;
+  padding: 6px; 
 
   h1 {
       color: #d5f34c;
@@ -57,7 +58,7 @@
 
 .comments-card-content {
     color: #fff;
-    padding: 0vh 2vh;
+    // padding: 0vh 2vh;
     align-items: left;
     font-family: 'Anonymous pro', monospace;
     font-size: 18px;

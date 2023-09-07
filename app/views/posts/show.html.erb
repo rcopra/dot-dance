@@ -2,13 +2,13 @@
     data-controller="post-subscription"
     data-post-subscription-post-id-value="<%= @post.id %>">
 
-  <div class="card-search">
-    <h1 style="text-decoration: underline; font-size: 24"> Original post </h1>
-    <h1><%= @post.title %></h1>
-    <p><%= @first_comment.content if !@post.comments.empty?%></p>
-    <p><%= @first_comment.user.username %></p>
+  <div class="comments-card" style="border: 1px solid white; padding: 10px">
 
-    <h1 style="font-family: Poppins', sans-serif;text-transform: uppercase;font-size: 20px;font-weight: bolder;padding: 5px 0px;">Join the discusssion</h1>
+    <h1 style="color:white"><%= @post.title %></h1>
+    <p>comment created by<%= @first_comment.user.username %> on <%= @post.created_at.strftime("%a %b %e at %l:%M %p") %></p>
+    <p style="color:white;font-size: 18px;font-family: 'Anonymous Pro';font-weight: bolder"><%= @first_comment.content if !@post.comments.empty?%></p>
+    </div>
+    <h1 style="font-family: 'Poppins', sans-serif; text-transform: uppercase; padding: 2vh 0vh 0.5vh 0vh;">Reply to <%= @first_comment.user.username %></h1>
     <%= simple_form_for [@post, @comment],
       html: { data: { action: "turbo:submit-end->post-subscription#resetForm" }, } do |f|
     %>
@@ -20,9 +20,6 @@
       %>
       <%= f.submit "send", class: "button-thread" %>
     <% end %>
-  </div>
-
-  <hr>
   <div class="comments" data-post-subscription-target="comments">
     <% if !@post.comments.empty? %>
       <% @rest_comments.each do |comment| %>
