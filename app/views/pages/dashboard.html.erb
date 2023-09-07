@@ -12,8 +12,10 @@
               <%= attendee.event.address %>,
             </p>
   <div class="button-dashboard" style="box-shadow: <%= @box_shadow %>; background: <%= @button_attend %>; padding: 10px">
-    <%= link_to "TO THREADS", event_posts_path(attendee.event) %>
-
+    <%= link_to "DETAILS", event_path(attendee.event) %>
+  </div>
+  <div class="button-dashboard" style="box-shadow: <%= @box_shadow %>; background: <%= @button_attend %>; padding: 10px">
+      <%= link_to "TO THREADS", event_posts_path(attendee.event) %>
   </div>
       <hr>
           <% end %>
