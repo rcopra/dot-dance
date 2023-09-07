@@ -6,13 +6,10 @@
           <h1 style="padding: 10px">Agenda</h1>
               <hr>
           <% @user.attendees.each do |attendee| %>
-            <p style="padding-left: 10px"> <%= attendee.event.title %></p>
-            <p style="padding-left: 10px"><%= attendee.event.date %></p>
+            <p style="padding-left: 10px"><%= link_to attendee.event.title, event_path(attendee.event) %></p>
+            <p style="padding-left: 10px"><%= attendee.event.date.strftime(" %b %e %Y") %></p>
             <p style="padding-left: 10px"><%= attendee.event.address %>
 
-  <div class="button-dashboard" style="box-shadow: <%= @box_shadow %>; background: <%= @button_attend %>; padding: 10px">
-    <%= link_to "DETAILS", event_path(attendee.event) %>
-  </div>
   <div class="button-dashboard" style="box-shadow: <%= @box_shadow %>; background: <%= @button_attend %>; padding: 10px">
       <%= link_to "TO THREADS", event_posts_path(attendee.event) %>
   </div>
