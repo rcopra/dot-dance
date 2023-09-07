@@ -15,7 +15,7 @@
     </div>
     <div class="card-grid"></div>
       <div class="card-footer">
-      <div class="card-footer-item" style="color: <%= @color %>"> <%= rand(1..10) %> comments</div>
+      <div class="card-footer-item" style="color: <%= @color %>"> <%= post.comments.count - 1 %> comments</div>
       <div class="card-footer-item" style="color: <%= @color %>"> <%= link_to event_post_path(post.event, post) do %>
         <i class="fa-regular fa-paper-plane fa-lg" style="color: #ffffff;"></i></div>
         <%end%>
