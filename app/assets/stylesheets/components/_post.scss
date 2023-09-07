@@ -89,6 +89,7 @@
 }
 
 
+
 .threads-card {
   color: #D5F34C;
   text-transform: uppercase;
@@ -168,15 +169,17 @@
   display: flex;
   text-align: center;
   border-radius: 0px;
+  background: transparent;
 
-  // a {
-  //   color: #D5F34C;
-  //   text-decoration: none;
-  //   font-family: 'Anonymous pro', monospace !important;
-  //   text-transform: uppercase;
-  //   z-index: 10;
-  //   // justify-content: center;
-  //   // display: inline-block;
-  //   font-weight: 300 !important;
-  //   font-size: 22px;
+  a {
+    color: #D5F34C;
+    text-decoration: none;
+    font-family: 'Anonymous pro', monospace !important;
+    text-transform: uppercase;
+    z-index: 10;
+    // justify-content: center;
+    // display: inline-block;
+    font-weight: 300 !important;
+    font-size: 22px;
   }
+}
