@@ -7,7 +7,7 @@
               <hr>
           <% @user.attendees.each do |attendee| %>
             <p style="padding-left: 10px"> <%= attendee.event.title %></p>
-            <p style="padding-left: 10px"><%= attendee.event.date %></p>
+            <p style="padding-left: 10px"><%= attendee.event_date_formatted %></p>
             <p style="padding-left: 10px"><%= attendee.event.address %>
 
   <div class="button-dashboard" style="box-shadow: <%= @box_shadow %>; background: <%= @button_attend %>; padding: 10px">
