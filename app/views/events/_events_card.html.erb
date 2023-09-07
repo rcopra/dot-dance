@@ -14,7 +14,7 @@
   <% else %>
     <p style="color: <%= @color %>"><%= event.address %></p>
   <% end %>
-        <p class="card-categories" style="color: <%= @color %>" > intense | long queue | weekender </p>
+        <p class="card-categories" style="color: <%= @color %>" > <%= ["intensity ++", "intensity +", "intensity -"].sample %> | <%= ["queue ++", "queue +", "queue -"].sample %> | <%= ["day party", "weekender"].sample %> </p>
       </div>
       <div class="card-grid"></div>
         <div class="card-footer">

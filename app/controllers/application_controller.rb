@@ -82,7 +82,7 @@ class ApplicationController < ActionController::Base
     linear-gradient(0deg,#000 2px,transparent 0) 0 100%;
     background-repeat: no-repeat;
     border: 1px solid black;
-    background-size: 5px 5px"
+    background-size: 1.5vh 1.5vh"
 
     : "linear-gradient(90deg,#fff 1.5px,transparent 0) 0 0,
     linear-gradient(180deg,#fff 1.5px,transparent 0) 0 0,
@@ -93,8 +93,7 @@ class ApplicationController < ActionController::Base
     linear-gradient(90deg,#fff 1.5px,transparent 0) 0 100%,
     linear-gradient(0deg,#fff 1.5px,transparent 0) 0 100%;
     background-repeat: no-repeat;
-    background-size: 5px 5px;
-    bottom: 0;"
+    background-size: 1.5vh 1.5vh"
   end
 
 

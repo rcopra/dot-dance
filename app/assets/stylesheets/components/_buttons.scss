@@ -67,7 +67,8 @@
   opacity: 0.7;
   margin: 1vh 0vh;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  // border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
 
   a {
     text-decoration: none;
@@ -84,9 +85,9 @@
     font-weight: 700;
     font-size: larger;
 
-    &:hover, &:focus {
-      color: rgba(31, 38, 135, 0.37);
-    }
+    // &:hover, &:focus {
+    //   color: rgba(31, 38, 135, 0.37);
+    // }
   }
 }
 

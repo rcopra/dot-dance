@@ -1,8 +1,8 @@
 <div class="wrapper-form">
 <div class="card-search">
-  <h1> Find your next event</h1>
-  <p>Discover the perfect event in Berlin with our ".dance" search feature. Filter by date, genre, location, or theme to find the nightlife experience that suits your style. </p>
-</div>
+    <h1> Find your next event</h1>
+    <p>Discover the perfect event in Berlin with our ".dance" search feature. Filter by date, genre, location, or theme to find the nightlife experience that suits your style. </p>
+  </div>
 </div>
     <%= simple_form_for :search, url: search_path, id:"search-form", method: "GET", html: { class: "form index-form" } do |f| %>
       <div class="search-container">
@@ -74,16 +74,15 @@
       </div>
     <% end %>
   </div>
-
-  <% if params[:search].present? %>
-    <div class="index-grid">
-      <% if @events.any? %>
-        <% @events.each do |event| %>
-          <%= render "events/events_card", event: event %>
+    <% if params[:search].present? %>
+      <div class="index-grid">
+        <% if @events.any? %>
+          <% @events.each do |event| %>
+            <%= render "events/events_card", event: event %>
+          <% end %>
+        <% else %>
+          <p style="text-transform: uppercase; font-weight: bolder">Sorry, no events found.</p>
         <% end %>
-      <% else %>
-        <em>Sorry, no events found.</em>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+      </div>
+    <% end %>
+  </div>
