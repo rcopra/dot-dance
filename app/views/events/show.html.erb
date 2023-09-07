@@ -34,7 +34,7 @@
     <div class="card-primary mt-2">
       <div class="card-primary__corners" style="max-height: 130px; box-shadow: <%= @box_shadow %>; background: <%= @corner_card %>"></div>
       <h6 style="color: <%= @color %>">Date</h6>
-      <p style="color: <%= @color %>"><%= @event.date %></p>
+      <p style="color: <%= @color %>"><%= @event.date_formatted %></p>
     </div>
     <div class="card-primary mt-2" style="box-shadow: <%= @box_shadow %>">
       <div class="card-primary__corners" style="background: <%= @corner_card %>"></div>
@@ -48,12 +48,11 @@
             <%= link_to "Cancel", event_attendee_path(@event, current_user.attendee_for_event(@event)), data: {turbo_method: :delete} %>
 
           <% else %>
-          <% event_date_formatted = @event.date.strftime(" %b %e %Y") %>
             <%= link_to "Attend", event_attendees_path(@event), data: {
               turbo_method: :post,
               controller: "alert",
               alert_title_value: "See you at #{@event.title}!",
-              alert_html_value: event_date_formatted,
+              alert_html_value: @event.date_formatted,
               alert_confirm_button_text_value: "<a href='#{event_posts_path(@event)}'>CHAT</a>",
               alert_show_cancel_button_value: true,
               alert_cancel_button_text_value: "<a href='#{events_path}'>see other options</a>",
