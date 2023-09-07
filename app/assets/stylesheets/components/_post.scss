@@ -5,7 +5,8 @@
   padding: 10px;
   position: relative;
   width: 100%;
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  // border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
   backdrop-filter: blur( .5px );
   // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   background-repeat: no-repeat;
@@ -35,25 +36,21 @@
       justify-content: center;
       display: inline-block;
       background-color: #D5F34C;
-
-      &:hover, &:focus {
-        color:rgba(31, 38, 135, 0.37);
-      }
   }
 }
 
 
 .post-primary__corners {
-  background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
-  linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
-  linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
-  linear-gradient(180deg,#fff 1px,transparent 0) 100% 0,
-  linear-gradient(270deg,#fff 1px,transparent 0) 100% 100%,
-  linear-gradient(0deg,#fff 1px,transparent 0) 100% 100%,
-  linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
-  linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
+  background: linear-gradient(90deg,#fff 1.5px,transparent 0) 0 0,
+  linear-gradient(180deg,#fff 1.5px,transparent 0) 0 0,
+  linear-gradient(270deg,#fff 1.5px,transparent 0) 100% 0,
+  linear-gradient(180deg,#fff 1.5px,transparent 0) 100% 0,
+  linear-gradient(270deg,#fff 1.5px,transparent 0) 100% 100%,
+  linear-gradient(0deg,#fff 1.5px,transparent 0) 100% 100%,
+  linear-gradient(90deg,#fff 1.5px,transparent 0) 0 100%,
+  linear-gradient(0deg,#fff 1.5px,transparent 0) 0 100%;
   background-repeat: no-repeat;
-  background-size: 5px 5px
+  background-size: 2vh 2vh;
 }
 
 
@@ -75,7 +72,8 @@
   text-transform: uppercase;
   color: white;
   background-color: black;
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  // border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
   border-radius: 2px;
   width: 80px;
 }
@@ -89,9 +87,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-
-
 
 
 .threads-card {
@@ -108,7 +103,8 @@
   background-position: bottom right;
   background-size: cover;
   position: relative;
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  // border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
 
   h1 {
       color: #d5f34c;
@@ -120,16 +116,16 @@
 
 
 .threads-card-corners {
-  background: linear-gradient(90deg,#fff 1px,transparent 0) 0 0,
-  linear-gradient(180deg,#fff 1px,transparent 0) 0 0,
-  linear-gradient(270deg,#fff 1px,transparent 0) 100% 0,
-  linear-gradient(180deg,#fff 1px,transparent 0) 100% 0,
-  linear-gradient(270deg,#fff 1px,transparent 0) 100% 100%,
-  linear-gradient(0deg,#fff 1px,transparent 0) 100% 100%,
-  linear-gradient(90deg,#fff 1px,transparent 0) 0 100%,
-  linear-gradient(0deg,#fff 1px,transparent 0) 0 100%;
+  background: linear-gradient(90deg,#fff 1.5px,transparent 0) 0 0,
+  linear-gradient(180deg,#fff 1.5px,transparent 0) 0 0,
+  linear-gradient(270deg,#fff 1.5px,transparent 0) 100% 0,
+  linear-gradient(180deg,#fff 1.5px,transparent 0) 100% 0,
+  linear-gradient(270deg,#fff 1.5px,transparent 0) 100% 100%,
+  linear-gradient(0deg,#fff 1.5px,transparent 0) 100% 100%,
+  linear-gradient(90deg,#fff 1.5px,transparent 0) 0 100%,
+  linear-gradient(0deg,#fff 1.5px,transparent 0) 0 100%;
   background-repeat: no-repeat;
-  background-size: 5px 5px;
+  background-size: 2vh 2vh;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -158,7 +154,6 @@
 .button-thread {
   height: 40px;
   outline: none;
-  padding: 10px;
   position: relative;
   justify-content: center;
   width: 100%;
@@ -174,15 +169,14 @@
   text-align: center;
   border-radius: 0px;
 
-  a {
-    color: #D5F34C;
-    text-decoration: none;
-    font-family: 'Anonymous pro', monospace !important;
-    text-transform: uppercase;
-    z-index: 10;
-    // justify-content: center;
-    // display: inline-block;
-    font-weight: 300 !important;
-    font-size: 22px;
+  // a {
+  //   color: #D5F34C;
+  //   text-decoration: none;
+  //   font-family: 'Anonymous pro', monospace !important;
+  //   text-transform: uppercase;
+  //   z-index: 10;
+  //   // justify-content: center;
+  //   // display: inline-block;
+  //   font-weight: 300 !important;
+  //   font-size: 22px;
   }
-}

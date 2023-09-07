@@ -6,6 +6,7 @@
 .tag-selector {
   position: absolute;
   transform: scale(0);
+  font-size: 16px;
   z-index: 14;
 }
 
@@ -20,9 +21,12 @@
   margin-right: 0.6rem;
   margin-bottom: 0.4rem;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Anonymous pro', monospace;
   z-index: 12;
+  font-size: 16px;
 }
+
+
 
 .tag-selector:checked + label {
   background-color: #D5F34C;
@@ -38,7 +42,8 @@
   position: relative;
   border: 0.1px solid (255, 255, 255, 0.2);
   width: 100%;
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  // border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
   margin-bottom: 2vh;
 
   p {
@@ -63,6 +68,7 @@
       justify-content: center;
       display: inline-block;
       background-color: #D5F34C;
+      font-size: 16px;
 
       &:hover, &:focus {
         color:rgba(31, 38, 135, 0.37);

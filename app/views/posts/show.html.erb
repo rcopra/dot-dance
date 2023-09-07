@@ -2,7 +2,7 @@
     data-controller="post-subscription"
     data-post-subscription-post-id-value="<%= @post.id %>">
   <div class="card-search">
- <h1> Original post </h1>
+ <h1 style="text-decoration: underline; font-size: 24"> Original post </h1>
   <h1><%= @post.title %></h1>
 
 
@@ -12,18 +12,18 @@
     <% end %>
   </div>
 
-<h1>Join the discusssion</h1>
-<%= simple_form_for [@post, @comment],
-  html: { data: { action: "turbo:submit-end->post-subscription#resetForm" }, } do |f|
-%>
-  <%= f.input :content,
-    label: false,
-    placeholder: "Comment ##{@post.title}",
-    wrapper_html: {class: "flex-grow-1 mb-0", id: "post_comment"},
-    input_html: {class: "h-100"}
+<h1 style="font-family: 'Poppins', sans-serif; text-transform: uppercase;font-family: 'Poppins', sans-serif;text-transform: uppercase;font-size: 20px;font-weight: bolder;padding: 5px 0px;">Join the discusssion</h1>
+  <%= simple_form_for [@post, @comment],
+    html: { data: { action: "turbo:submit-end->post-subscription#resetForm" }, } do |f|
   %>
-  <%= f.submit "send", class: "button-filter" %>
-<% end %>
- </div>
+    <%= f.input :content,
+      label: false,
+      placeholder: "Comment ##{@post.title}",
+      wrapper_html: {class: "flex-grow-1 mb-0", id: "post_comment"},
+      input_html: {class: "h-100"}
+    %>
+      <%= f.submit "send", class: "button-thread" %>
+    <% end %>
+    </div>
   </div>
 </div>
