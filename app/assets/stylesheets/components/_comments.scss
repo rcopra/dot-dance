@@ -1,0 +1,111 @@
+
+
+.comments-card {
+  color: #D5F34C;
+  text-transform: uppercase;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( .5px );
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1vh;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  position: relative;
+  // border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-bottom:  1px solid white;
+  font-size: 12px ;
+
+  h1 {
+      color: #d5f34c;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+
+    }
+  }
+
+
+
+.comments-card-corners {
+  background: linear-gradient(90deg,#fff 1.5px,transparent 0) 0 0,
+  linear-gradient(180deg,#fff 1.5px,transparent 0) 0 0,
+  linear-gradient(270deg,#fff 1.5px,transparent 0) 100% 0,
+  linear-gradient(180deg,#fff 1.5px,transparent 0) 100% 0,
+  linear-gradient(270deg,#fff 1.5px,transparent 0) 100% 100%,
+  linear-gradient(0deg,#fff 1.5px,transparent 0) 100% 100%,
+  linear-gradient(90deg,#fff 1.5px,transparent 0) 0 100%,
+  linear-gradient(0deg,#fff 1.5px,transparent 0) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 2vh 2vh;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 1s;
+  width: 100%;
+  min-height: 315px;
+  height: auto;
+  transition: 1s;
+
+  &:hover {
+    background-size: 100vh 100vw
+  }
+}
+
+
+.comments-card-content {
+    color: #fff;
+    padding: 0vh 2vh;
+    align-items: left;
+    font-family: 'Anonymous pro', monospace;
+    font-size: 18px;
+}
+
+.button-thread {
+  height: 40px;
+  outline: none;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  margin: 1vh 0vh;
+  box-shadow: 0 8px 32px 0rgba( 31, 38, 135, 0.37 ) ;
+  border: 2px solid #D5F34C;
+  display: flex;
+  align-items: center;
+  color: #D5F34C;
+  text-transform: uppercase;
+  font-family: 'Anonymous pro', monospace !important;
+  display: flex;
+  text-align: center;
+  border-radius: 0px;
+  background: transparent;
+
+  a {
+    color: #D5F34C;
+    text-decoration: none;
+    font-family: 'Anonymous pro', monospace !important;
+    text-transform: uppercase;
+    z-index: 10;
+    // justify-content: center;
+    // display: inline-block;
+    font-weight: 300 !important;
+    font-size: 22px;
+  }
+}
+
+
+.comment-card-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  bottom: 0;
+  position: fixed;
+  border-top: #D5F34C solid 1px;
+  width: 100%;
+
+  p {
+    padding: 0.5vh;
+  }
+}
