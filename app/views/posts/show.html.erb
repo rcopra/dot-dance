@@ -4,11 +4,15 @@
   <div class="card-search">
  <h1 style="text-decoration: underline; font-size: 24"> Original post </h1>
   <h1><%= @post.title %></h1>
+  <p><%= @first_comment.content if !@post.comments.empty?%></p>
+  <p><%= @@first_comment.user.username %></p>
 
 
-  <div class="comments" data-post-subscription-target="comments">
-    <% @post.comments.each do |comment| %>
-      <%= render "comments/comment", comment: comment %>
+ <div class="comments" data-post-subscription-target="comments">
+    <% if !@post.comments.empty? %>
+      <% @rest_comments.each do |comment| %>
+        <%= render "comments/comment", comment: comment %>
+      <% end %>
     <% end %>
   </div>
 

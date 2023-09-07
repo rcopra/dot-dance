@@ -9,6 +9,12 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
+    if !@post.comments.empty?
+      @first_comment = @post.comments.first
+      @rest_comments = @post.comments.slice(1...)
+    else
+      @first_comment = @post.comments
+    end
   end
 
   def create
