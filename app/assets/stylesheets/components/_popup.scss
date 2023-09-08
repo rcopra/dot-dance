@@ -9,7 +9,11 @@
 }
 
 
-
+.swal2-styled {
+  margin: 0.3125em !important;
+  padding: 0px 20px 0px 20px !important;
+  border: 2px solid #D5F34C !important;
+}
 
 .swal2-styled.swal2-confirm{
   background-color: linear-gradient(270deg, rgba(31,0,71,1) 0%, rgba(23,0,64,1) 32%, rgba(0,0,0,1) 100%);;
