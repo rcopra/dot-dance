@@ -1,8 +1,4 @@
 <div>
-    <%if current_user == @event.user  %>
-      <%= link_to "Edit the event", edit_event_path(@event) %>
-      <%= link_to 'Delete this event', @event, data: {turbo_method: :delete}%>
-<% end %>
 
 <div class="show-grid mt-2">
   <div>
