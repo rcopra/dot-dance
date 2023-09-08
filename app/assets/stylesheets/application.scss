@@ -21,7 +21,7 @@ a {
       color: var(--dark-text-color);
       background: linear-gradient(270deg, rgba(31,0,71,1) 0%, rgba(23,0,64,1) 32%, rgba(0,0,0,1) 100%);
       background-repeat: none;
-      padding: 6vh 2vvh 2vw;
+      padding: 6vh 2vh 2vw;
       min-height: 100vh;
   }
 
@@ -42,6 +42,7 @@ a {
 @media (prefers-color-scheme: light) {
   body {
       background: white;
+      padding: 6vh 2vh 2vw;
       color:  black;
   }
 
