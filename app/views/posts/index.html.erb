@@ -12,27 +12,21 @@
     <%= simple_form_for(@post, url: event_posts_path) do |f| %>
       <%= f.error_notification %>
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-          <%= f.input :title, placeholder: "post title", label: false  %>
-          <%= f.input :topic, placeholder: "select topic", label: false, collection: ["select topic", "queuing", "vibe", "general", "social"], select_html: {class: "dropdown-no-empty"}, selected: 1 %>
-          <%= f.simple_fields_for :comments do |m| %>
-          <%= m.input :content, placeholder: "your message", label: false %>
-          <% end %>
-        </div>
-        <%= f.button :submit, class: "button-thread"%>
+      <%= f.input :title, placeholder: "post title", label: false  %>
+      <%= f.input :topic, placeholder: "select topic", label: false, collection: ["select topic", "queuing", "vibe", "general", "social"], select_html: {class: "dropdown-no-empty"}, selected: 1 %>
+      <%= f.simple_fields_for :comments do |m| %>
+        <%= m.input :content, placeholder: "your message", label: false %>
+      <% end %>
+      <%= f.button :submit, class: "button-thread"%>
     <% end %>
 
-    <div
-      data-controller="posts-channel-subscription"
-      data-posts-channel-subscription-event-id-value="<%=@event.id%>">
-    <div >
       <div data-posts-channel-subscription-target="posts">
         <% if @posts.any? %>
           <% @posts.each do |post| %>
                 <%= render "posts/post", post: post %>
-            </div>
           <% end %>
         <% else %>
           <p style="font-family: 'Poppins', sans-serif; text-transform: uppercase;font-family: 'Poppins', sans-serif;text-transform: uppercase;font-size: 20px;font-weight: bolder">No threads yet..</em>
           <% end %>
-        </div>
-    </div>
+      </div>
+  </div>
