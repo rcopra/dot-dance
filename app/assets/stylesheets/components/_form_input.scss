@@ -27,7 +27,7 @@
     background-color: rgba(255,255,255,0.5);
     border-color: #ffffff;
     outline: 0;
-    box-shadow: 0 3px 3px 0 rgba(213,243,76, 0.8);
+    box-shadow: 1px 6px 5px 0 rgba(213,243,76, 0.8);
 }
 
 .form-control.file.optional {
@@ -55,7 +55,6 @@
   // border: var(--bs-border-width) solid var(--bs-border-color);
   border: 1px solid white;
   border-radius: var(--bs-border-radius);
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-radius: 0px;
 }
 
@@ -66,7 +65,7 @@
     border-bottom-color: white;
     border-left-color: white;
   outline: 0;
-  box-shadow: 0 3px 3px 0 rgba(213,243,76, 0.8);
+  box-shadow: 1px 6px 5px 0 rgba(213,243,76, 0.8);
 }
 
 .form-select.select.required {
